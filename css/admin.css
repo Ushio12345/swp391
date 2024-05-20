@@ -1,0 +1,28 @@
+.admin {
+  display: flex;
+}
+.admin .left {
+  width: 20%;
+  padding: 0 20px;
+  background-color: #f8f9fa;
+  height: 100vh;
+}
+.admin .left ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 10px 0 10px 0;
+}
+.admin .left ul li:hover {
+  background-color: blue;
+  color: white;
+}
+.admin .left ul li:hover a {
+  color: #f8f9fa;
+}
+.admin .left ul li a {
+  padding: 10px 120px 10px 0;
+}
+.admin .right {
+  width: 70%;
+  margin: 0 auto;
+}/*# sourceMappingURL=admin.css.map */

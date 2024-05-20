@@ -1,0 +1,30 @@
+.admin {
+    display: flex;
+    .left {
+        width: 20%;
+        padding: 0 20px;
+        background-color: #f8f9fa;
+        height: 100vh;
+        ul {
+            li {
+                list-style: none;
+                font-size: 17px;
+                padding: 10px 0 10px 0;
+                &:hover {
+                    background-color: blue;
+                    color: white;
+                    a {
+                        color: #f8f9fa;
+                    }
+                }
+                a {
+                    padding: 10px 120px 10px 0;
+                }
+            }
+        }
+    }
+    .right {
+        width: 70%;
+        margin: 0 auto;
+    }
+}

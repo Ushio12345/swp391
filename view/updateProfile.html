@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thông tin của bạn</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../css/updateProfile.css" />
+    </head>
+    <style>
+        form {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 700;
+        }
+        button {
+            margin: 0 auto;
+        }
+        .user-acc img {
+            border-radius: 50%;
+            width: 90px;
+            margin-right: 20px;
+        }
+    </style>
+    <body>
+        <form action="" class="w-50 m-auto" id="profile-form">
+            <h1 class="text-center">THÔNG TIN TÀI KHOẢN</h1>
+            <div class="mb-3">
+                <label for="username" class="form-label">Tên</label>
+                <input type="text" class="form-control" id="username" placeholder="Nhập tên" value="${account.username}" />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Nhập email" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <input type="number" class="form-control" id="phone" placeholder="Nhập SĐT" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" value="" />
+            </div>
+            <a href="">Xem lịch sử đặt sân</a>
+            <button type="submit" class="btn btn-primary w-25">Lưu thay đổi</button>
+            <a href="HomePage.html" class="text-center text-danger m-2">Trở về trang chủ</a>
+        </form>
+        <script></script>
+        <script>
+            function loadUserData() {
+                const storedAccount = localStorage.getItem("account");
+                if (storedAccount) {
+                    account = JSON.parse(storedAccount);
+                }
+                // Populate form fields with user data
+                document.getElementById("username").value = account.userName;
+                document.getElementById("email").value = account.email;
+                document.getElementById("phone").value = account.phone;
+                document.getElementById("password").value = account.password;
+            }
+
+            function saveUserData() {
+                localStorage.setItem("account", JSON.stringify(account));
+            }
+
+            document.getElementById("profile-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                // Update account object with form data
+                account.userName = document.getElementById("username").value;
+                account.email = document.getElementById("email").value;
+                account.phone = document.getElementById("phone").value;
+                account.password = document.getElementById("password").value;
+
+                saveUserData();
+                alert("Thông tin đã được cập nhật!");
+            });
+
+            document.addEventListener("DOMContentLoaded", loadUserData);
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js";
+            integrity = "sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+";
+            crossorigin = "anonymous";
+        </script>
+    </body>
+</html>

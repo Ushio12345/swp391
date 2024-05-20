@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <!-- link GG font -->
+
+        <!-- bs5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- tailwind -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.css"
+            integrity="sha512-z66y0PypNStA/ynlSM3kk1/SDr1n7pIBpQO86uxkHAtBYOJJzXAAFq9rjFz8Egh25cpv3EPcrS4Y8nVHyKB9Dw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- link css -->
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <style>
+        .login a i {
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .login a:hover i {
+            color: aqua;
+            border: 2px solid aqua;
+            box-shadow: rgb(250, 249, 249) 0px 22px 70px 4px;
+        }
+    </style>
+    <body>
+        <section class="header">
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <img src="../img/logo-cau-long-dep-01.png" alt="" />
+                    </div>
+                    <div class="search-name">
+                        <input type="text" placeholder="Nhập tên sân cần tìm" id="" />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="list-location">
+                            <p><i class="fa-solid fa-location-dot"></i> Tìm theo vị trí</p>
+                            <div class="location-item">
+                                <ul id="location">
+                                    <li><a href="">Quận Bình Thạnh</a></li>
+                                    <li><a href="">Quận Tân Phú</a></li>
+                                    <li><a href="">Quận 7</a></li>
+                                    <li><a href="">TP.Thủ Đức</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="login">
+                            <!-- truyền avata và user-name nếu người dùng đã login  -->
+                            <!-- nếu chưa login chuyển sang trang login  -->
+                            <a href="login.html" class="user">
+                                <!-- truyền avt  -->
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+
+                            <a href="login.html" class="logout">LOGIN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bot">
+                <a href="HomePage.html" class="active">Trang Chủ</a>
+                <a href="">Giới Thiệu</a>
+                <!-- drop down sắp xếp các sân -->
+                <select id="sorted" name="">
+                    <option value="">Sắp xếp theo</option>
+                    <option value="1">Từ A - Z</option>
+                    <option value="2">Từ Z - A</option>
+                    <option value="3">Giá tăng dần</option>
+                    <option value="4">Giá giảm dần</option>
+                </select>
+                <a href="login.html">Đăng kí đối tác</a>
+            </div>
+        </section>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <div class="banner-intro container">
+                <h1>Chào mừng đến với ForBAB</h1>
+                <p>
+                    Bạn muốn tìm sân để thể hiện đam mê và nâng cao kỹ năng? <span>ForBAB</span> giúp bạn dễ dàng tìm và đặt sân cầu lông tốt nhất gần
+                    bạn. Dù bạn là người chơi giải trí hay vận động viên thi đấu, chúng tôi luôn sẵn sàng phục vụ. Trải nghiệm đặt sân nhanh chóng,
+                    linh hoạt với các sân chất lượng hàng đầu. Hãy sẵn sàng nâng tầm trận đấu của bạn cùng <span>ForBAB</span>!
+                </p>
+                <button class="btn-link">ĐẶT SÂN NGAY</button>
+            </div>
+            <!-- chuyển qua trang -->
+        </section>
+
+        <!-- +++++++LIST yard+++++++++++++++ -->
+        <section class="yard" data-cards="8" data-index="0">
+            <h1 class="m-4">DANH SÁCH CÁC SÂN CẦU LÔNG</h1>
+            <div class="container w-4/5">
+                <div class="list-yard grid lg:grid-cols-4 md:grid-cols-3 gap-4 sm:lg:grid-cols-2">
+                    <!-- truyền thông tin sân vào -->
+                    <!-- <div class="card-yard">
+                        <div class="card-yard-img">
+                            <img src="../img/download.jpg" alt="" />
+                        </div>
+                        <div class="card-yard-content">
+                            <p>Tên sân:</p>
+                            <p>Địa chỉ:</p>
+                            <p>Giá tiền:</p>
+                            <p>Giờ mở cửa:</p>
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                           
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- ================HOT YARD============================ -->
+        <section class="yard" data-cards="3" data-index="1">
+            <h1 class="m-4">CÁC SÂN MỚI</h1>
+            <div class="container w-4/5">
+                <div class="list-yard grid lg:grid-cols-2 lg:grid grid-rows-2 gap-4">
+                    <!-- truyền thông tin sân vào -->
+                    <!-- <div class="card-yard">
+                        <div class="card-yard-img">
+                            <img src="../img/download.jpg" alt="" />
+                        </div>
+                        <div class="card-yard-content">
+                            <p>Tên sân:</p>
+                            <p>Địa chỉ:</p>
+                            <p>Giá tiền:</p>
+                            <p>Giờ mở cửa:</p>
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="dinner col-lg-4 col-md-6">
+                        <h2>4BaB</h2>
+                        <p class="mb-3">
+                            Hãy liên hệ với chúng tôi để biết thêm thông tin và đặt sân ngay hôm nay. Chúng tôi rất hân hạnh được đón tiếp bạn!
+                        </p>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://vn.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="category col-lg-2 col-md-6 col-sm-6">
+                        <h2>Các Cơ Sở</h2>
+                        <a href="">Bình Thạnh</a><br />
+                        <a href="">Tân Phú</a><br />
+                        <a href="">Quận 7</a><br />
+                        <a href="">TP. Thủ Đức</a>
+                    </div>
+
+                    <div class="archieve col-lg-2 col-md-6 col-sm-6">
+                        <h2>Thành Lập</h2>
+                        <a href="">June 2024</a>
+                    </div>
+
+                    <div class="contact col-lg-4 col-md-6">
+                        <h2>Đăng kí ngay để cảm nhận</h2>
+                        <p class="mb-4">Vui lòng nhập email của bạn <br />chúng tôi sẽ liên hệ trong thời gian sớm nhất</p>
+                        <input type="text" placeholder="Email của bạn" />
+                        <br />
+                        <button>Hoàn tất</button>
+                    </div>
+                </div>
+                <hr />
+                <p>Babminton Court Managerment System Team 4 - SWP391</p>
+            </div>
+        </section>
+        <script src="../js/JS.js"></script>
+    </body>
+</html>
