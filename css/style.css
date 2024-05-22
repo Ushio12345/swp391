@@ -48,7 +48,7 @@ h1 {
   border-bottom: 3px solid #eeeded;
 }
 .header .header-top .logo {
-  width: 400px;
+  width: 500px;
 }
 .header .header-top .logo img {
   width: 150px;
@@ -56,7 +56,7 @@ h1 {
 .header .header-top .header-top-right {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 500px;
 }
 .header .header-top .header-top-right .login {
   display: flex;
@@ -76,16 +76,11 @@ h1 {
 .header .header-top .header-top-right .login p.user-name {
   font-weight: 700;
 }
-.header .header-top .header-top-right .login .logout {
-  padding: 10px 15px;
+.header .header-top .header-top-right .login .logout:hover,
+.header .header-top .header-top-right .login .register:hover {
   background-color: #1f1f6a;
-  color: #eeeded;
-  border-radius: 10px;
-  margin-left: 20px;
-}
-.header .header-top .header-top-right .login .logout:hover {
-  background-color: black;
   transition: 0.5s;
+  border-radius: 10px;
 }
 .header .header-top .header-top-right .list-location > p {
   animation: location 1s infinite alternate;
@@ -146,14 +141,20 @@ h1 {
   padding-top: 20px;
   border-top: 1px solid black;
   color: #eeeded;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header .header-bot a {
+.header .header-bot a,
+.header .header-bot p {
   padding: 0 20px;
   font-size: 18px;
   font-weight: 600;
   position: relative;
+  cursor: pointer;
 }
-.header .header-bot a::before {
+> .header .header-bot a::before,
+> .header .header-bot p::before {
   position: absolute;
   content: "";
   bottom: -10px;
@@ -162,10 +163,12 @@ h1 {
   height: 3px;
   background-color: #1f1f6a;
 }
-.header .header-bot a:hover {
+.header .header-bot a:hover,
+.header .header-bot p:hover {
   color: #6bc4e7;
 }
-.header .header-bot a:hover::before {
+.header .header-bot a:hover::before,
+.header .header-bot p:hover::before {
   width: 100%;
   transition: 0.5s;
 }
@@ -185,6 +188,34 @@ h1 {
 }
 .header .header-bot #sorted option {
   padding: 5px;
+}
+.header .locGio {
+  position: relative;
+}
+.header .locGio .filter-time {
+  display: none;
+  position: absolute;
+  background-color: rgba(31, 31, 106, 0.631372549);
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+.header .locGio .filter-time li {
+  margin: 5px 0;
+  padding: 5px 0;
+  width: 100%;
+}
+.header .locGio .filter-time li:hover {
+  background-color: #598d93;
+}
+.header .locGio .filter-time a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+}
+.header .locGio:hover .filter-time {
+  display: block;
 }
 
 .banner {

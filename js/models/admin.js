@@ -14,10 +14,7 @@ function renderListAdmin(listAdmin) {
                 <td>${admin.name}</td>
                 <td>${admin.email}</td>
                 <td>${admin.phone}</td>
-                <td>
-                    <button onclick="delProduct(${admin.id})" class="btn btn-danger mr-2">Xoá</button>
-                    <button onclick="editProduct(${admin.id})" class="btn btn-primary">Sửa</button>
-                </td>
+                
             </tr>
         `;
         adList += contentTr;

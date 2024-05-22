@@ -2,9 +2,10 @@ var facility = {
     facilityID: "CS1",
     facilityName: "Sân cầu lông Thảo Nguyên",
     facilityAddress: "TP. Hồ Chí Minh",
-    review: "Đẹp",
+
     facilityOperating: "7:00 - 23:00",
     facilityEmail: "thaonguyenBabmindton@gmail.com",
+    facilityPrice: "50.000 - 75.000",
     start: 5,
 };
 
@@ -12,7 +13,6 @@ function renderFacility(listFacility) {
     var facilityRow = "";
 
     for (var i = 0; i < listFacility.length; i++) {
-        // Start from 0
         var facility = listFacility[i];
         var facilityTr = `
         <tr>
@@ -22,7 +22,8 @@ function renderFacility(listFacility) {
                 <td>${facility.facilityAddress}</td>
                 <td>${facility.facilityEmail}</td>
                 <td>${facility.facilityOperating}</td>
-                <td>${facility.review}</td>
+                 <td>${facility.facilityPrice}</td>
+         
                 <td>${facility.start}</td>
                 <td>
                     <button onclick="delProduct('${facility.facilityID}')" class="btn btn-danger mr-2">Xoá</button>

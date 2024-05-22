@@ -70,7 +70,7 @@ h1 {
         color: $white;
         border-bottom: 3px solid $white;
         .logo {
-            width: 400px;
+            width: 500px;
             img {
                 width: 150px;
             }
@@ -78,7 +78,7 @@ h1 {
 
         .header-top-right {
             @include df;
-            width: 400px;
+            width: 500px;
             .login {
                 @include df;
                 a {
@@ -95,15 +95,12 @@ h1 {
                 p.user-name {
                     font-weight: 700;
                 }
-                .logout {
-                    padding: 10px 15px;
-                    background-color: $blue;
-                    color: $white;
-                    border-radius: 10px;
-                    margin-left: 20px;
+                .logout,
+                .register {
                     &:hover {
-                        background-color: black;
+                        background-color: $blue;
                         transition: 0.5s;
+                        border-radius: 10px;
                     }
                 }
             }
@@ -172,14 +169,18 @@ h1 {
         padding-top: 20px;
         border-top: 1px solid black;
         color: $white;
+        @include df();
+        justify-content: center;
 
-        a {
+        a,
+        p {
             padding: 0 20px;
             font-size: 18px;
             font-weight: 600;
             position: relative;
+            cursor: pointer;
 
-            &::before {
+            > &::before {
                 position: absolute;
                 content: "";
                 bottom: -10px;
@@ -218,6 +219,35 @@ h1 {
 
         #sorted option {
             padding: 5px;
+        }
+    }
+    .locGio {
+        position: relative;
+        .filter-time {
+            display: none;
+            position: absolute;
+            background-color: #1f1f6aa1;
+            padding: 10px 0;
+            list-style: none;
+            margin: 0;
+            border: 1px solid #ccc;
+            li {
+                margin: 5px 0;
+                padding: 5px 0;
+                width: 100%;
+                &:hover {
+                    background-color: #598d93;
+                }
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                width: 100%;
+            }
+        }
+        &:hover .filter-time {
+            display: block;
         }
     }
 }
