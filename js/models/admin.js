@@ -9,6 +9,7 @@ function renderListAdmin(listAdmin) {
         var admin = listAdmin[i];
         var contentTr = `
             <tr>
+                <td>${i + 1}</td>
                 <td>${admin.id}</td>
                 <td>${admin.name}</td>
                 <td>${admin.email}</td>

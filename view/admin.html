@@ -45,290 +45,291 @@
                 </ul>
             </div>
 
-             <div class="right">
-        <header class="display-4 my-4 text-center">DANH SÁCH THÔNG TIN </header>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="dsAdmin" role="tabpanel">
-                 <!--Danh sách sản phẩm -->
-                    <div role="tabpanel" class="tab-pane in active" id="dsAdmin">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <!-- BEGIN BUTTOM THÊM MỚI -->
-                                <button id="" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-plus mr-1"></i>
-                                    Thêm Mới
-                                </button>
-                                <!-- END BUTTON THÊM MỚI -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- BEGIN TÌM KIẾM -->
-                                <div class="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nhập từ khóa"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                    />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
-                                    </div>
+            <div class="right">
+                <header class="display-4 my-4 text-center">DANH SÁCH THÔNG TIN</header>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="dsAdmin" role="tabpanel">
+                        <!--Danh sách sản phẩm -->
+                        <div role="tabpanel" class="tab-pane in active" id="dsAdmin">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <button id="" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                        <i class="fa fa-plus mr-1"></i>
+                                        Thêm Mới
+                                    </button>
+                                    <!-- END BUTTON THÊM MỚI -->
                                 </div>
-                                <!-- END TÌM KIẾM -->
-                            </div>
-                        </div>
-                        <div class="clear-fix"></div>
-                        <div class="tblAdmin" id="tblAdmin">
-                            <!-- BEGIN TABLE SẢN PHẨM -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên</th>
-                                    <th>Email</th>
-                                    <th>Số điện thoại</th>
-                                </thead>
-                                <tbody id="tbDSAdmin"></tbody>
-                            </table>
-                            <!-- END TABLE SẢN PHẨM -->
-                        </div>
-                        <br />
-                    </div>
-            </div>
-            <div class="tab-pane fade" id="dsCoSo" role="tabpanel">
-                <!--Danh sách sản phẩm -->
-                    <div role="tabpanel" class="tab-pane" id="dsCoSo">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <!-- BEGIN BUTTOM THÊM MỚI -->
-                                <button id="btnThemCoSo" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-plus mr-1"></i>
-                                    Thêm Mới
-                                </button>
-                                <!-- END BUTTON THÊM MỚI -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- BEGIN TÌM KIẾM -->
-                                <div class="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nhập từ khóa"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                    />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                <div class="col-md-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
                                     </div>
+                                    <!-- END TÌM KIẾM -->
                                 </div>
-                                <!-- END TÌM KIẾM -->
                             </div>
+                            <div class="clear-fix"></div>
+                            <div class="tblAdmin" id="tblAdmin">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>ID</th>
+                                        <th>Tên</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                    </thead>
+                                    <tbody id="tbDSAdmin"></tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
+                            </div>
+                            <br />
                         </div>
-                        <div class="clear-fix"></div>
-                        <div class="tblCoSo" id="tblCoSo">
-                            <!-- BEGIN TABLE SẢN PHẨM -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên Cơ Sở</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Email</th>
-                                      
-                                          <th>Giở hoạt động</th>
-                                           <th>Review</th>
-                                             <th>Đánh giá</th>
-                                </thead>
-                                <tbody id="tblDSCoSo"></tbody>
-                            </table>
-                            <!-- END TABLE SẢN PHẨM -->
-                        </div>
-                        <br />
                     </div>
-            </div>
-            <div class="tab-pane fade" id="dsChuSan" role="tabpanel">
-                  <!--Danh sách sản phẩm -->
-                    <div role="tabpanel" class="tab-pane in active" id="dsChuSan">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <!-- BEGIN BUTTOM THÊM MỚI -->
-                                <button id="btnThemChuSan" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-plus mr-1"></i>
-                                    Thêm Mới
-                                </button>
-                                <!-- END BUTTON THÊM MỚI -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- BEGIN TÌM KIẾM -->
-                                <div class="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nhập từ khóa"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                    />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                    <div class="tab-pane fade" id="dsCoSo" role="tabpanel">
+                        <!--Danh sách sản phẩm -->
+                        <div role="tabpanel" class="tab-pane" id="dsCoSo">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <button id="btnThemCoSo" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                        <i class="fa fa-plus mr-1"></i>
+                                        Thêm Mới
+                                    </button>
+                                    <!-- END BUTTON THÊM MỚI -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
                                     </div>
+                                    <!-- END TÌM KIẾM -->
                                 </div>
-                                <!-- END TÌM KIẾM -->
                             </div>
-                        </div>
-                        <div class="clear-fix"></div>
-                        <div class="tblChuSan" id="tblChuSan">
-                            <!-- BEGIN TABLE SẢN PHẨM -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên</th>
-                                    <th>Email</th>
-                                    <th>Số điện thoại</th>
-                                </thead>
-                                <tbody id="tblDanhSachSP"></tbody>
-                            </table>
-                            <!-- END TABLE SẢN PHẨM -->
-                        </div>
-                        <br />
-                    </div>
-            </div>
-            <div class="tab-pane fade" id="dsKhachHang" role="tabpanel">
-                 <!--Danh sách sản phẩm -->
-                    <div role="tabpanel" class="tab-pane in active" id="dsKhachHang">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <!-- BEGIN BUTTOM THÊM MỚI -->
-                                <button id="btnThemKH" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-plus mr-1"></i>
-                                    Thêm Mới
-                                </button>
-                                <!-- END BUTTON THÊM MỚI -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- BEGIN TÌM KIẾM -->
-                                <div class="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nhập từ khóa"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                    />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
-                                    </div>
-                                </div>
-                                <!-- END TÌM KIẾM -->
-                            </div>
-                        </div>
-                        <div class="clear-fix"></div>
-                        <div class="tblKH" id="tblKH">
-                            <!-- BEGIN TABLE SẢN PHẨM -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên</th>
-                                    <th>Email</th>
-                                    <th>Số điện thoại</th>
-                                </thead>
-                                <tbody id="tbkDSKH"></tbody>
-                            </table>
-                            <!-- END TABLE SẢN PHẨM -->
-                        </div>
-                        <br />
-                    </div>
-            </div>
-            <div class="tab-pane fade" id="dsStaff" role="tabpanel">
-                  <!--Danh sách sản phẩm -->
-                    <div role="tabpanel" class="tab-pane in active" id="dsStaff">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <!-- BEGIN BUTTOM THÊM MỚI -->
-                                <button id="btnThemStaff" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                    <i class="fa fa-plus mr-1"></i>
-                                    Thêm Mới
-                                </button>
-                                <!-- END BUTTON THÊM MỚI -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- BEGIN TÌM KIẾM -->
-                                <div class="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Nhập từ khóa"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="basic-addon2"
-                                    />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
-                                    </div>
-                                </div>
-                                <!-- END TÌM KIẾM -->
-                            </div>
-                        </div>
-                        <div class="clear-fix"></div>
-                        <div class="tblStaff" id="tblStaff">
-                            <!-- BEGIN TABLE SẢN PHẨM -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>STT</th>
-                                    <th>ID</th>
-                                    <th>Tên</th>
-                                 
-                                    <th>Số điện thoại</th>
-                                       <th>Ca làm</th>
-                                </thead>
-                                <tbody id="tbDSStaff"></tbody>
-                            </table>
-                            <!-- END TABLE SẢN PHẨM -->
-                        </div>
-                        <br />
-                    </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <!--KetThuc Tabmenu-->
+                            <div class="clear-fix"></div>
+                            <div class="tblCoSo" id="tblCoSo">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>ID</th>
+                                        <th>Tên Cơ Sở</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Email</th>
 
-            <!-- The Modal -->
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <th>Giở hoạt động</th>
+                                        <th>Review</th>
+                                        <th>Đánh giá</th>
+                                    </thead>
+                                    <tbody id="tblDSCoSo"></tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
+                            </div>
+                            <br />
                         </div>
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Tên Sản Phẩm</label>
-                                <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm" />
+                    </div>
+                    <div class="tab-pane fade" id="dsChuSan" role="tabpanel">
+                        <!--Danh sách sản phẩm -->
+                        <div role="tabpanel" class="tab-pane in active" id="dsChuSan">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <button id="btnThemChuSan" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                        <i class="fa fa-plus mr-1"></i>
+                                        Thêm Mới
+                                    </button>
+                                    <!-- END BUTTON THÊM MỚI -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
+                                    </div>
+                                    <!-- END TÌM KIẾM -->
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Giá</label>
-                                <input id="GiaSP" class="form-control" placeholder="Nhập vào giá" />
+                            <div class="clear-fix"></div>
+                            <div class="tblChuSan" id="tblChuSan">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>ID</th>
+                                        <th>Tên</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                        <th>ID Sân</th>
+                                    </thead>
+                                    <tbody id="tblDsChuSan"></tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
                             </div>
-                            <div class="form-group">
-                                <label>Hình Ảnh</label>
-                                <input id="HinhSP" class="form-control" placeholder="Nhập vào hình sản phẩm" />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dsKhachHang" role="tabpanel">
+                        <!--Danh sách sản phẩm -->
+                        <div role="tabpanel" class="tab-pane in active" id="dsKhachHang">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <button id="btnThemKH" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                        <i class="fa fa-plus mr-1"></i>
+                                        Thêm Mới
+                                    </button>
+                                    <!-- END BUTTON THÊM MỚI -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
+                                    </div>
+                                    <!-- END TÌM KIẾM -->
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <button onclick="addProduct()" class="btn btn-success">Thêm sản phẩm</button>
+                            <div class="clear-fix"></div>
+                            <div class="tblKH" id="tblKH">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>ID</th>
+                                        <th>Tên</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                    </thead>
+                                    <tbody id="tbkDSKH"></tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dsStaff" role="tabpanel">
+                        <!--Danh sách sản phẩm -->
+                        <div role="tabpanel" class="tab-pane in active" id="dsStaff">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <button id="btnThemStaff" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                        <i class="fa fa-plus mr-1"></i>
+                                        Thêm Mới
+                                    </button>
+                                    <!-- END BUTTON THÊM MỚI -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                        </div>
+                                    </div>
+                                    <!-- END TÌM KIẾM -->
+                                </div>
+                            </div>
+                            <div class="clear-fix"></div>
+                            <div class="tblStaff" id="tblStaff">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>ID</th>
+                                        <th>Tên</th>
 
-                                <button onclick="updateProduct()" class="btn btn-primary ml-2">Cập nhật sản phẩm</button>
+                                        <th>Số điện thoại</th>
+                                        <th>Email</th>
+                                    </thead>
+                                    <tbody id="tbDSStaff"></tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
                             </div>
+                            <br />
                         </div>
-                        <!-- Modal footer -->
-                        <div class="modal-footer"></div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--KetThuc Tabmenu-->
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Tên Sản Phẩm</label>
+                            <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá</label>
+                            <input id="GiaSP" class="form-control" placeholder="Nhập vào giá" />
+                        </div>
+                        <div class="form-group">
+                            <label>Hình Ảnh</label>
+                            <input id="HinhSP" class="form-control" placeholder="Nhập vào hình sản phẩm" />
+                        </div>
+                        <div class="form-group">
+                            <button onclick="addProduct()" class="btn btn-success">Thêm sản phẩm</button>
+
+                            <button onclick="updateProduct()" class="btn btn-primary ml-2">Cập nhật sản phẩm</button>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
         <div id="container"></div>
         <style>
             #container {
@@ -343,15 +344,13 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"
         ></script>
-       
+
         <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
-       <script src="../js/models/admin.js"></script>
-       <script src="../js/models/facility.js"></script>
-    <script src="../js/JS.js"></script>
+
         <!-- axios -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
@@ -359,10 +358,16 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-       
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-       
+
+        <!-- model js -->
+        <script src="../js/models/admin.js"></script>
+        <script src="../js/models/facility.js"></script>
+        <script src="../js/managerScreen.js"></script>
+        <script src="../js/models/courtMng.js"></script>
+        <script src="../js/models/staff.js"></script>
     </body>
 </html>
