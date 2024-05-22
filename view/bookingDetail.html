@@ -94,7 +94,7 @@
                     <p>Địa chỉ: <span>TP.Thủ Đức</span></p>
                     <p>Giờ hoạt động: <span>7:00 - 23:00</span></p>
                     <p>Giá tiền/giờ: <span>50.000 - 75.000</span></p>
-                    <div class="choice-option">
+                    <div class="choice-option" class="mb-4">
                         <form action="" id="booking-form" class="d-flex">
                             <div class="choice-date">
                                 <input type="date" class="form-control" id="date" placeholder="" value="" />
@@ -102,7 +102,6 @@
 
                             <div class="choice-type">
                                 <select id="schedule-type" name="schedule-type">
-                                    <option value=""></option>
                                     <option value="single-schedule">Lịch lẻ</option>
                                     <option value="fixed-schedule">Lịch cố định</option>
                                     <option value="flexible-schedule">Lịch linh hoạt</option>
@@ -118,6 +117,7 @@
                             </div>
                         </form>
                     </div>
+
                     <div class="slot">
                         <ul class="slot-list row">
                             <li class="col-lg-3"><button>7:00 - 8:00</button></li>
@@ -168,7 +168,7 @@
 
                     <div class="archieve col-lg-2 col-md-6 col-sm-6">
                         <h2>Thành Lập</h2>
-                        <a href="">June 2024</a>
+                        <a href="">Tháng 6 2024</a>
                     </div>
 
                     <div class="contact col-lg-4 col-md-6">
@@ -184,5 +184,69 @@
             </div>
         </section>
         <script src="../js/JS.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var scheduleTypeSelect = document.getElementById("schedule-type");
+                var choiceYardSelect = document.getElementById("choiceYard");
+                var choiceDateInput = document.getElementById("date");
+                var choiceOptionContainer = document.querySelector(".choice-option");
+                var monthSelect = document.createElement("select");
+                var daySelect = document.createElement("select");
+                var hourInput = document.createElement("input");
+
+                // Tạo khung chọn tháng
+                monthSelect.id = "month";
+                monthSelect.name = "month";
+                monthSelect.innerHTML = "<option value=''>Chọn tháng</option>";
+                for (var i = 1; i <= 12; i++) {
+                    monthSelect.innerHTML += "<option value='" + i + "'>" + "Tháng " + i + "</option>";
+                }
+
+                // Tạo khung chọn thứ
+                daySelect.id = "day";
+                daySelect.name = "day";
+                daySelect.innerHTML = "<option value=''>Chọn thứ</option>";
+
+                var daysOfWeek = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "Chủ Nhật"];
+                for (var i = 1; i <= 7; i++) {
+                    daySelect.innerHTML += "<option value='" + i + "'>" + daysOfWeek[i - 1] + "</option>";
+                }
+
+                // Tạo input số giờ
+                hourInput.type = "number";
+                hourInput.id = "hours";
+                hourInput.name = "hours";
+                hourInput.placeholder = "Nhập số giờ";
+
+                // Xử lý sự kiện khi người dùng thay đổi lựa chọn
+                scheduleTypeSelect.addEventListener("change", function () {
+                    var formGroup = document.createElement("div");
+                    formGroup.classList.add("choice-group");
+
+                    if (this.value === "fixed-schedule") {
+                        formGroup.appendChild(monthSelect);
+                        formGroup.appendChild(daySelect);
+                        choiceOptionContainer.appendChild(formGroup);
+                    } else {
+                        if (document.getElementById("month")) {
+                            monthSelect.parentNode.removeChild(monthSelect);
+                        }
+                        if (document.getElementById("day")) {
+                            daySelect.parentNode.removeChild(daySelect);
+                        }
+                    }
+
+                    if (this.value === "flexible-schedule") {
+                        formGroup.appendChild(monthSelect);
+                        formGroup.appendChild(hourInput);
+                        choiceOptionContainer.appendChild(formGroup);
+                    } else {
+                        if (document.getElementById("hours")) {
+                            hourInput.parentNode.removeChild(hourInput);
+                        }
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

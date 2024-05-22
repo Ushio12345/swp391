@@ -480,6 +480,12 @@ label.star:before {
 /* ======================================================================================= */
 
 .detail-yard {
+    #hours,
+    #day {
+        height: 40px;
+        margin-left: 20px;
+    }
+
     h1 {
         font-size: 30px;
         font-weight: 700;
@@ -590,4 +596,8 @@ label.star:before {
 #circle.active,
 #circle:focus {
     background-color: rgb(20, 165, 20);
+}
+.additional-options {
+    display: flex;
+    gap: 10px;
 }
