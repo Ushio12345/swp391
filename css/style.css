@@ -124,9 +124,10 @@ h1 {
 }
 .header .header-top .search-name input {
     width: 350px;
-    height: 30px;
+    height: 40px;
     border-radius: 20px;
     padding-left: 20px;
+    font-size: 20px;
 }
 .header .header-top .search-name i {
     position: relative;
@@ -401,7 +402,7 @@ label.star:before {
 
 .footer p,
 .footer a {
-    font-size: 15px;
+    font-size: 17px;
     color: rgb(205, 197, 197);
 }
 
@@ -460,79 +461,6 @@ label.star:before {
 
 /* ---------------------------------booking detail --------------------------------------  */
 /* ======================================================================================= */
-.detail-yard {
-    padding-top: 200px;
-    width: 80%;
-    margin: 0 auto;
-}
-.detail-yard #hours,
-.detail-yard #day {
-    height: 40px;
-    margin-left: 20px;
-}
-.detail-yard h1 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #1f1f6a;
-}
-.detail-yard .choice-option select {
-    height: 37.6px;
-}
-.detail-yard .choice-option #booking-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-.detail-yard .container {
-    display: flex;
-    align-items: center;
-    margin: 50px 0;
-}
-.detail-yard .yard-left {
-    padding: 30px;
-}
-.detail-yard .yard-left h1 {
-    color: red;
-    margin-bottom: 30px;
-}
-.detail-yard .yard-left p {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 35px;
-}
-.detail-yard .yard-left span {
-    font-weight: 700;
-    font-size: 20px;
-}
-.detail-yard .yard-left a {
-    padding: 10px 30px;
-    background-color: #1f1f6a;
-    color: #eeeded;
-    border-radius: 20px;
-}
-.detail-yard .yard-left a:hover {
-    background-color: black;
-}
-
-.slot {
-    margin: 20px 0;
-}
-.slot .slot-list {
-    display: flex;
-    align-items: center;
-}
-.slot .slot-list li button {
-    color: white;
-    background-color: #317c69;
-    margin: 5px;
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-}
-.slot .slot-list li button:hover {
-    background-color: #000000;
-}
 
 .cmt .carousel-item img {
     width: 100px;
@@ -540,7 +468,13 @@ label.star:before {
 }
 
 .cmt {
+    background-color: #40e0d0;
     padding: 70px;
+}
+.cmt h4 {
+    color: #317c69;
+    font-weight: 25px;
+    font-weight: 700;
 }
 
 .cmt-content i {
@@ -549,12 +483,14 @@ label.star:before {
 }
 
 .cmt-content h3 {
-    font-weight: 600;
+    font-weight: 800;
     font-style: italic;
+    color: #4caf50;
 }
 
 .cmt h4 {
     font-weight: 600;
+    font-size: 23px;
 }
 
 .cus-img {

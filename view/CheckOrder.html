@@ -13,19 +13,44 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <!-- tailwind -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.css"
+            integrity="sha512-z66y0PypNStA/ynlSM3kk1/SDr1n7pIBpQO86uxkHAtBYOJJzXAAFq9rjFz8Egh25cpv3EPcrS4Y8nVHyKB9Dw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- GOOGLE FRONT -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
         <link rel="stylesheet" href="../css/updateProfile.css" />
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <style>
-        form {
+        /* form {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-top: 150px;
+        } */
+        .header {
+            position: relative;
+            padding-bottom: 5px;
         }
-        a {
-            text-decoration: none;
-            font-weight: 700;
-        }
+
         button {
             margin: 0 auto;
         }
@@ -34,47 +59,174 @@
             width: 90px;
             margin-right: 20px;
         }
+        .form-order {
+            margin: 30px 0;
+        }
+        a {
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+        }
     </style>
-    <form action="" class="w-50 m-auto">
-        <h1 class="text-center">THÔNG TIN ĐƠN ĐẶT HÀNG</h1>
-        <div class="mb-3">
-            <label for="" class="form-label">Tên khách hàng</label>
-            <input type="name-user" class="form-control" id="email" placeholder="" value="Ushio" readonly />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="" value="Ushio@gmail.com" readonly />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Số điện thoại</label>
-            <input type="number" class="form-control" id="phone" placeholder="Nhập SĐT" value="123344523" readonly />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Sân</label>
-            <input type="text" class="form-control" id="pass" placeholder="" value="0000" />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Ngày</label>
-            <input type="date" class="form-control" id="pass" placeholder="" value="" />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Giờ</label>
-            <input type="text" class="form-control" id="pass" placeholder="" value="0000" />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Dạng đăng kí</label>
-            <input type="text" class="form-control" id="pass" placeholder="" value="Lịch lịn hoạt" />
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Tổng tiền</label>
-            <input type="number" class="form-control" id="pass" placeholder="" value="100000" readonly />
-        </div>
+    <section class="header">
+        <div class="">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="../img/logo-cau-long-dep-01.png" alt="" />
+                </div>
+                <div class="search-name">
+                    <input type="text" placeholder="Nhập tên sân cần tìm" id="" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header-top-right">
+                    <div class="list-location">
+                        <p><i class="fa-solid fa-location-dot"></i> Tìm theo vị trí</p>
+                        <div class="location-item">
+                            <ul id="location">
+                                <li><a href="">Quận Bình Thạnh</a></li>
+                                <li><a href="">Quận Tân Phú</a></li>
+                                <li><a href="">Quận 7</a></li>
+                                <li><a href="">TP.Thủ Đức</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="login">
+                        <!-- truyền avata và user-name nếu người dùng đã login  -->
+                        <!-- nếu chưa login chuyển sang trang login  -->
+                        <a href="updateProfile.html" class="user">
+                            <!-- truyền avt  -->
+                            <img src="../img/download (user).jpg" alt="" />
+                        </a>
 
-        <div class="btn d-flex">
-            <button class="btn btn-success w-25">Xác nhận</button>
+                        <p class="user-name">Ushio</p>
+
+                        <div class="locGio">
+                            <p>Chọn sân theo giờ</p>
+                            <ul class="filter-time">
+                                <li><a href="">7:00 - 12:00</a></li>
+                                <li><a href="">12:00 - 16:00</a></li>
+                                <li><a href="">16:00 - 20:00</a></li>
+                                <li><a href="">20:00 - 23:00</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="login.html" class="logout">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a class="text-center" href="bookingDetail.html">Trở về trang đặt sân</a>
-    </form>
+        <div class="header-bot">
+            <a href="HomePage.html" class="active">Trang Chủ</a>
+            <a href="">Giới Thiệu</a>
+            <!-- drop down sắp xếp các sân -->
+            <select id="sorted" name="">
+                <option value="">Sắp xếp theo</option>
+                <option value="1">Từ A - Z</option>
+                <option value="2">Từ Z - A</option>
+                <option value="3">Giá tăng dần</option>
+                <option value="4">Giá giảm dần</option>
+            </select>
+
+            <div class="locGio">
+                <p>Chọn sân theo giờ</p>
+                <ul class="filter-time">
+                    <li><a href="">7:00 - 12:00</a></li>
+                    <li><a href="">12:00 - 16:00</a></li>
+                    <li><a href="">16:00 - 20:00</a></li>
+                    <li><a href="">20:00 - 23:00</a></li>
+                </ul>
+            </div>
+
+            <a href="registerParner.html">Đăng kí đối tác</a>
+        </div>
+    </section>
+
+    <div class="form-order">
+        <form action="" class="w-50 m-auto check-order">
+            <h1 class="text-center">THÔNG TIN ĐƠN ĐẶT HÀNG</h1>
+            <div class="mb-3">
+                <label for="" class="form-label">Tên khách hàng</label>
+                <input type="name-user" class="form-control" id="email" placeholder="" value="Ushio" readonly />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="" value="Ushio@gmail.com" readonly />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Số điện thoại</label>
+                <input type="number" class="form-control" id="phone" placeholder="Nhập SĐT" value="123344523" readonly />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Sân</label>
+                <input type="text" class="form-control" id="pass" placeholder="" value="0000" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Ngày</label>
+                <input type="date" class="form-control" id="pass" placeholder="" value="" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Giờ</label>
+                <input type="text" class="form-control" id="pass" placeholder="" value="0000" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Dạng đăng kí</label>
+                <input type="text" class="form-control" id="pass" placeholder="" value="Lịch linh hoạt" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Tổng tiền</label>
+                <input type="number" class="form-control" id="pass" placeholder="" value="100000" readonly />
+            </div>
+
+            <div class="btn d-flex">
+                <button class="btn btn-success w-25">Thanh toán</button>
+            </div>
+            <a class="text-center text-primary" href="bookingDetail.html">Trở về trang đặt sân</a>
+        </form>
+    </div>
+    <!-- footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="dinner col-lg-4 col-md-6">
+                    <h2>4BaB</h2>
+                    <p class="mb-3">
+                        Hãy liên hệ với chúng tôi để biết thêm thông tin và đặt sân ngay hôm nay. Chúng tôi rất hân hạnh được đón tiếp bạn!
+                    </p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://vn.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="category col-lg-2 col-md-6 col-sm-6">
+                    <h2>Các Chi Nhánh</h2>
+                    <a href="">Bình Thạnh</a><br />
+                    <a href="">Tân Phú</a><br />
+                    <a href="">Quận 7</a><br />
+                    <a href="">TP. Thủ Đức</a>
+                </div>
+
+                <div class="archieve col-lg-2 col-md-6 col-sm-6">
+                    <h2>Thời Gian</h2>
+                    <a href="">Tháng 6 2024</a>
+                </div>
+
+                <div class="contact col-lg-4 col-md-6">
+                    <h2>Đăng kí ngay để cảm nhận</h2>
+                    <p class="mb-4">Vui lòng nhập email của bạn <br />chúng tôi sẽ liên hệ trong thời gian sớm nhất</p>
+                    <input type="text" placeholder="Email của bạn" />
+                    <br />
+                    <button>Hoàn tất</button>
+                </div>
+            </div>
+            <hr />
+            <p>&#169; Tháng 5 2024 - Babminton Court Managerment System Team 4 - SWP391</p>
+        </div>
+    </section>
     <body>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

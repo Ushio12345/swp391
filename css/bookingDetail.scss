@@ -1,0 +1,229 @@
+@mixin df() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    position: relative;
+    padding-bottom: 10px;
+}
+.detail-yard {
+    width: 80%;
+    margin: 100px auto;
+
+    overflow: hidden;
+
+    h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    i {
+        color: red;
+    }
+    .rate {
+        i {
+            color: rgb(234, 234, 90);
+        }
+    }
+
+    .detail-yard-title {
+        @include df();
+        margin-bottom: 30px;
+    }
+    .detail-yard-info {
+        @include df();
+        .yard-left,
+        .yard-right {
+            height: 400px;
+        }
+        .yard-left {
+            background-color: white;
+            font-size: 18px;
+            padding: 20px;
+            span {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            h3 {
+                border-left: 5px solid green;
+                padding-left: 10px;
+                font-size: 25px;
+                font-weight: 800;
+            }
+        }
+        .yard-service {
+            margin: 30px 0;
+            background-color: #f3f3f3;
+            padding: 30px 10px;
+            border-radius: 20px;
+            i {
+                color: green;
+                margin-right: 10px;
+            }
+            div {
+                padding: 10px;
+            }
+            h4 {
+                font-weight: 800;
+                font-size: 22px;
+                position: relative;
+                padding-bottom: 10px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: -3px;
+                    left: 10px;
+                    width: 150px;
+                    background-color: orangered;
+                    height: 4px;
+                }
+            }
+        }
+    }
+}
+
+.form-booking {
+    font-weight: 6 00;
+    background-color: white;
+    padding: 40px;
+    .nap-gio {
+        border: 1px solid black;
+        padding: 20px;
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .input-gio {
+            input {
+                margin: 10px 0;
+                width: 100%;
+                height: 30px;
+                padding-left: 10px;
+                border: 2px solid black;
+            }
+        }
+    }
+
+    .order {
+        .type-booking {
+            @include df();
+            justify-content: space-evenly;
+            button {
+                background-color: #111d8b;
+                width: 150px;
+                height: 40px;
+                color: #f3f3f3;
+                border-radius: 10px;
+                &:focus {
+                    background-color: green;
+                }
+            }
+        }
+        .list-slot-and-time {
+            margin: 20px 0;
+            .calendar-and-yard {
+                @include df();
+                justify-content: center;
+                .time-line {
+                    @include df();
+                    width: 500px;
+                    margin-right: 100px;
+                    background-color: #f3f3f3;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    p {
+                        margin: 0 10px;
+                    }
+                }
+                .option-yard {
+                    background-color: #f3f3f3;
+                    select {
+                        width: 100px;
+                        background-color: #f3f3f3;
+                        height: 40px;
+                    }
+                }
+            }
+            .slot-schedule {
+                .article {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        border: 2px solid black;
+                        padding: 5px;
+                        margin: 5px;
+                    }
+                }
+                .list-slot {
+                    display: flex;
+
+                    .slot {
+                        background-color: rgb(149, 149, 226);
+
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slot-schedule {
+    display: flex;
+    margin-top: 20px;
+}
+
+.days-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.day-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    min-width: 100px;
+    margin-bottom: 10px;
+}
+
+.slots-grid-outer {
+    overflow-x: auto;
+    flex: 1;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(16, 150px); /* Adjust width to 70px per slot */
+    grid-auto-rows: 40px; /* Adjust height to 40px per slot */
+    gap: 10px; /* Add 10px gap between both rows and columns */
+    min-width: calc(16 * 100px + 15 * 10px); /* Calculate minimum width */
+}
+
+.slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100px;
+    background-color: #198a19;
+    color: white;
+    cursor: pointer;
+}
+.slot.selected {
+    background-color: #cce5ff;
+    color: black;
+}

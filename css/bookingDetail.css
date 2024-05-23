@@ -1,0 +1,220 @@
+.header {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.detail-yard {
+  width: 80%;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.detail-yard h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.detail-yard i {
+  color: red;
+}
+.detail-yard .rate i {
+  color: rgb(234, 234, 90);
+}
+.detail-yard .detail-yard-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.detail-yard .detail-yard-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-yard .detail-yard-info .yard-left,
+.detail-yard .detail-yard-info .yard-right {
+  height: 400px;
+}
+.detail-yard .detail-yard-info .yard-left {
+  background-color: white;
+  font-size: 18px;
+  padding: 20px;
+}
+.detail-yard .detail-yard-info .yard-left span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.detail-yard .detail-yard-info .yard-left h3 {
+  border-left: 5px solid green;
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: 800;
+}
+.detail-yard .detail-yard-info .yard-service {
+  margin: 30px 0;
+  background-color: #f3f3f3;
+  padding: 30px 10px;
+  border-radius: 20px;
+}
+.detail-yard .detail-yard-info .yard-service i {
+  color: green;
+  margin-right: 10px;
+}
+.detail-yard .detail-yard-info .yard-service div {
+  padding: 10px;
+}
+.detail-yard .detail-yard-info .yard-service h4 {
+  font-weight: 800;
+  font-size: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.detail-yard .detail-yard-info .yard-service h4::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 10px;
+  width: 150px;
+  background-color: orangered;
+  height: 4px;
+}
+
+.form-booking {
+  font-weight: 6 0;
+  background-color: white;
+  padding: 40px;
+}
+.form-booking .nap-gio {
+  border: 1px solid black;
+  padding: 20px;
+}
+.form-booking .nap-gio h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.form-booking .nap-gio .input-gio input {
+  margin: 10px 0;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  border: 2px solid black;
+}
+.form-booking .order .type-booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.form-booking .order .type-booking button {
+  background-color: #111d8b;
+  width: 150px;
+  height: 40px;
+  color: #f3f3f3;
+  border-radius: 10px;
+}
+.form-booking .order .type-booking button:focus {
+  background-color: green;
+}
+.form-booking .order .list-slot-and-time {
+  margin: 20px 0;
+}
+.form-booking .order .list-slot-and-time .calendar-and-yard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+}
+.form-booking .order .list-slot-and-time .calendar-and-yard .time-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  margin-right: 100px;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-booking .order .list-slot-and-time .calendar-and-yard .time-line p {
+  margin: 0 10px;
+}
+.form-booking .order .list-slot-and-time .calendar-and-yard .option-yard {
+  background-color: #f3f3f3;
+}
+.form-booking .order .list-slot-and-time .calendar-and-yard .option-yard select {
+  width: 100px;
+  background-color: #f3f3f3;
+  height: 40px;
+}
+.form-booking .order .list-slot-and-time .slot-schedule .article {
+  display: flex;
+  flex-direction: column;
+}
+.form-booking .order .list-slot-and-time .slot-schedule .article li {
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+.form-booking .order .list-slot-and-time .slot-schedule .list-slot {
+  display: flex;
+}
+.form-booking .order .list-slot-and-time .slot-schedule .list-slot .slot {
+  background-color: rgb(149, 149, 226);
+  width: 100px;
+}
+
+.slot-schedule {
+  display: flex;
+  margin-top: 20px;
+}
+
+.days-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.day-header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  min-width: 100px;
+  margin-bottom: 10px;
+}
+
+.slots-grid-outer {
+  overflow-x: auto;
+  flex: 1;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(16, 150px); /* Adjust width to 70px per slot */
+  grid-auto-rows: 40px; /* Adjust height to 40px per slot */
+  gap: 10px; /* Add 10px gap between both rows and columns */
+  min-width: 1750px; /* Calculate minimum width */
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  height: 40px;
+  width: 100px;
+  background-color: #198a19;
+  color: white;
+  cursor: pointer;
+}
+
+.slot.selected {
+  background-color: #cce5ff;
+  color: black;
+}/*# sourceMappingURL=bookingDetail.css.map */
