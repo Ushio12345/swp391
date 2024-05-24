@@ -15,7 +15,7 @@
     overflow: hidden;
 
     h1 {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 700;
     }
     i {
@@ -170,6 +170,10 @@
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .slot-schedule {
     display: flex;
     margin-top: 20px;
@@ -194,7 +198,6 @@
     border: 1px solid #ccc;
     background-color: #f0f0f0;
     min-width: 100px;
-    margin-bottom: 10px;
 }
 
 .slots-grid-outer {
@@ -204,10 +207,10 @@
 
 .slots-grid {
     display: grid;
-    grid-template-columns: repeat(16, 150px); /* Adjust width to 70px per slot */
-    grid-auto-rows: 40px; /* Adjust height to 40px per slot */
-    gap: 10px; /* Add 10px gap between both rows and columns */
-    min-width: calc(16 * 100px + 15 * 10px); /* Calculate minimum width */
+    grid-template-columns: repeat(16, 150px);
+    grid-auto-rows: 40px;
+    gap: 10px;
+    min-width: calc(16 * 150px + 15 * 10px);
 }
 
 .slot {
@@ -218,12 +221,21 @@
     text-align: center;
     box-sizing: border-box;
     height: 40px;
-    width: 100px;
-    background-color: #198a19;
-    color: white;
+    width: 150px;
     cursor: pointer;
 }
+
 .slot.selected {
-    background-color: #cce5ff;
-    color: black;
+    background-color: #d3f8e2;
+}
+.choice-month {
+    width: 100px;
+    height: 40px;
+    select {
+        text-transform: none;
+        width: 100px;
+        height: 40px;
+        margin: 0 20px;
+        background-color: #d3f8e2;
+    }
 }
