@@ -111,39 +111,37 @@
             </div>
         </section>
         <section class="detail-yard">
-            <div class="container">
-                <h1 class="text-center" style="font-size: 40px">THÔNG TIN CHI TIẾT</h1>
+            <h1 class="text-center" style="font-size: 40px">THÔNG TIN CHI TIẾT</h1>
 
-                <h1 class="">SÂN CẦU LÔNG ABC</h1>
-                <div class="detail-yard-title">
-                    <div class="address">
-                        <p>
-                            <i class="fa-solid fa-location-dot"></i> Địa chỉ:
-                            <span> 123 Phường Tân Nhơn Phú, Quận 9, Thành phố Hồ Chí Minh</span>
-                        </p>
-                    </div>
-                    <div class="rate">
-                        <p>Đánh giá: 4/5 <i class="fa-solid fa-star"></i> (2 / Đánh giá)</p>
+            <h1 class="">SÂN CẦU LÔNG ABC</h1>
+            <div class="detail-yard-title">
+                <div class="address">
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i> Địa chỉ:
+                        <span> 123 Phường Tân Nhơn Phú, Quận 9, Thành phố Hồ Chí Minh</span>
+                    </p>
+                </div>
+                <div class="rate">
+                    <p>Đánh giá: 4/5 <i class="fa-solid fa-star"></i> (2 / Đánh giá)</p>
+                </div>
+            </div>
+            <div class="detail-yard-info">
+                <div class="yard-left col-lg-6">
+                    <h3>Thông tin sân</h3>
+                    <p>Số sân: <span>5 sân</span></p>
+                    <p>Giờ hoạt động: <span>7:00 - 23:00</span></p>
+                    <p>Giá tiền/giờ: <span>50.000 - 75.000</span></p>
+                    <div class="yard-service row">
+                        <h4>Dịch vụ tiện ích</h4>
+                        <div class="col-lg-6"><i class="fa-solid fa-wifi"></i> Wifi</div>
+                        <div class="col-lg-6"><i class="fa-solid fa-square-parking"></i> Bãi đỗ xe rộng rãi</div>
+                        <div class="col-lg-6"><i class="fa-solid fa-mug-saucer"></i> Quán cà phê</div>
+                        <div class="col-lg-6"><i class="fa-solid fa-whiskey-glass"></i>Trà đá miễn phí</div>
                     </div>
                 </div>
-                <div class="detail-yard-info">
-                    <div class="yard-left col-lg-6">
-                        <h3>Thông tin sân</h3>
-                        <p>Số sân: <span>5 sân</span></p>
-                        <p>Giờ hoạt động: <span>7:00 - 23:00</span></p>
-                        <p>Giá tiền/giờ: <span>50.000 - 75.000</span></p>
-                        <div class="yard-service row">
-                            <h4>Dịch vụ tiện ích</h4>
-                            <div class="col-lg-6"><i class="fa-solid fa-wifi"></i> Wifi</div>
-                            <div class="col-lg-6"><i class="fa-solid fa-square-parking"></i> Bãi đỗ xe rộng rãi</div>
-                            <div class="col-lg-6"><i class="fa-solid fa-mug-saucer"></i> Quán cà phê</div>
-                            <div class="col-lg-6"><i class="fa-solid fa-whiskey-glass"></i>Trà đá miễn phí</div>
-                        </div>
-                    </div>
 
-                    <div class="yard-right col-lg-6">
-                        <img src="../img/4a331c1398d3d7a67ecba739d2e8bb43.jpg" alt="" />
-                    </div>
+                <div class="yard-right col-lg-6">
+                    <img src="../img/4a331c1398d3d7a67ecba739d2e8bb43.jpg" alt="" />
                 </div>
             </div>
         </section>
@@ -162,8 +160,9 @@
                 <div class="order col-lg-8">
                     <div class="type-booking">
                         <p>Dạng lịch:</p>
-                        <button class="fixed-schedule">Cố định</button>
                         <button class="single-schedule">Lịch lẻ</button>
+                        <button class="fixed-schedule">Cố định</button>
+
                         <button class="flexible-schedule">Lịch linh hoạt</button>
                     </div>
                     <div class="list-slot-and-time">
@@ -218,7 +217,7 @@
             <div class="container">
                 <div class="row">
                     <div class="dinner col-lg-4 col-md-6">
-                        <h2>4BaB</h2>
+                        <img src="../img/logo-cau-long-dep-01.png" alt="" />
                         <p class="mb-3">
                             Hãy liên hệ với chúng tôi để biết thêm thông tin và đặt sân ngay hôm nay. Chúng tôi rất hân hạnh được đón tiếp bạn!
                         </p>
@@ -295,7 +294,7 @@
 
                 function getWeekStart(date) {
                     const day = date.getDay();
-                    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
+                    const diff = date.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
                     return new Date(date.setDate(diff));
                 }
 
@@ -325,11 +324,23 @@
                             slotDiv.className = "slot";
                             slotDiv.textContent = slot;
                             slotDiv.addEventListener("click", () => {
-                                slotDiv.classList.toggle("selected");
+                                handleSlotClick(slotDiv);
                             });
                             slotsGrid.appendChild(slotDiv);
                         });
                     });
+                }
+
+                function handleSlotClick(slotDiv) {
+                    if (singleScheduleBtn.classList.contains("active")) {
+                        const selectedSlot = document.querySelector(".slot.selected");
+                        if (selectedSlot && selectedSlot !== slotDiv) {
+                            selectedSlot.classList.remove("selected");
+                        }
+                        slotDiv.classList.toggle("selected");
+                    } else {
+                        slotDiv.classList.toggle("selected");
+                    }
                 }
 
                 function updateCalendar(date) {
@@ -350,22 +361,31 @@
                 });
 
                 fixedScheduleBtn.addEventListener("click", function () {
-                    choiceMonth.classList.remove("hidden");
-                    timeLine.classList.add("hidden");
                     timeLine.style.display = "none";
+                    choiceMonth.classList.remove("hidden");
+                    singleScheduleBtn.classList.remove("active");
+                    flexibleScheduleBtn.classList.remove("active");
+                    fixedScheduleBtn.classList.add("active");
                 });
 
                 singleScheduleBtn.addEventListener("click", function () {
-                    choiceMonth.classList.add("hidden");
                     timeLine.style.display = "flex";
+                    choiceMonth.classList.add("hidden");
+                    fixedScheduleBtn.classList.remove("active");
+                    flexibleScheduleBtn.classList.remove("active");
+                    singleScheduleBtn.classList.add("active");
                 });
 
                 flexibleScheduleBtn.addEventListener("click", function () {
-                    choiceMonth.classList.add("hidden");
+                    timeLine.classList.remove("hidden");
                     timeLine.style.display = "flex";
+                    choiceMonth.classList.add("hidden");
+                    fixedScheduleBtn.classList.remove("active");
+                    singleScheduleBtn.classList.remove("active");
+                    flexibleScheduleBtn.classList.add("active");
                 });
 
-                updateCalendar(currentDate);
+                updateCalendar(currentDate); // Initial update
             });
         </script>
     </body>

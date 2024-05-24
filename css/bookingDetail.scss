@@ -10,9 +10,8 @@
 }
 .detail-yard {
     width: 80%;
-    margin: 100px auto;
-
-    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
 
     h1 {
         font-size: 30px;
@@ -198,6 +197,7 @@
     border: 1px solid #ccc;
     background-color: #f0f0f0;
     min-width: 100px;
+    margin-bottom: 10px;
 }
 
 .slots-grid-outer {
@@ -223,19 +223,22 @@
     height: 40px;
     width: 150px;
     cursor: pointer;
+    background-color: #198754;
+    color: white;
+    font-weight: 700;
+    margin: 0 !important;
 }
 
 .slot.selected {
     background-color: #d3f8e2;
+    color: red;
 }
+
 .choice-month {
-    width: 100px;
-    height: 40px;
     select {
-        text-transform: none;
+        background-color: #f3f3f3;
         width: 100px;
         height: 40px;
         margin: 0 20px;
-        background-color: #d3f8e2;
     }
 }

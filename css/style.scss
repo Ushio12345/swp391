@@ -181,7 +181,7 @@ h1 {
             position: relative;
             cursor: pointer;
 
-            > &::before {
+            &::before {
                 position: absolute;
                 content: "";
                 bottom: -10px;
@@ -222,6 +222,7 @@ h1 {
             padding: 5px;
         }
     }
+
     .locGio {
         position: relative;
         .filter-time {
@@ -421,6 +422,11 @@ label.star:before {
     background-color: #272626e7;
     color: white;
 }
+.dinner img {
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+}
 .footer h2 {
     font-size: 25px;
     font-weight: 700;
@@ -483,6 +489,7 @@ label.star:before {
     background-color: #317c69;
 }
 .detail-yard {
+    font-weight: 600;
     #hours,
     #day {
         margin-left: 20px;
@@ -504,7 +511,7 @@ label.star:before {
             margin-bottom: 30px;
         }
     }
-    padding-top: 200px;
+    padding: 70px 0;
     width: 80%;
     margin: 0 auto;
     .container {
