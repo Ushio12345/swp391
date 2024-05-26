@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.admin .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  background-color: #fff;
+  height: 60px;
+}
+.admin .topbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+}
+.admin .topbar .logo .logo-img {
+  width: 150px;
+}
+.admin .topbar .logo .nameapp p {
+  margin: 0;
+  font-weight: 700;
+}
+.admin .topbar .search {
+  position: relative;
+  width: 50%;
+  height: 30px;
+}
+.admin .topbar .search i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.admin .topbar .search input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 20px;
+  height: 30px;
+}
+.admin .topbar .notification .bell-icon {
+  position: relative;
+}
+.admin .topbar .notification .bell-icon i {
+  color: rgb(246, 246, 12);
+  font-size: 20px;
+}
+.admin .topbar .notification .bell-icon .number-notification {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+.admin .topbar .notification .bell-icon .number-notification p {
+  color: black;
+  font-size: 12px;
+  padding: 2px 3px;
+  border-radius: 20px;
+}
+.admin .topbar .user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+}
+.admin .topbar .user p {
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+.admin .topbar .user img {
+  width: 50px;
+  border-radius: 50%;
+}
+.admin .body-admin {
+  display: flex;
+}
+.admin .body-admin .admin-right {
+  width: 80%;
+  padding: 70px;
+}
+.admin .body-admin .admin-right .dash-num {
+  margin-top: 20px;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item {
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  box-shadow: rgba(0, 0, 0, 0.47) 0px 5px 15px 0px;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item .dash-num-item-left {
+  width: 50%;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item .dash-num-item-left h3 {
+  font-size: 50px;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item .dash-num-item-left p {
+  font-size: 12px;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item .dash-num-item-icon i {
+  font-size: 50px;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item:first-child {
+  background-color: rgb(231, 38, 38);
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item:nth-child(2) {
+  background-color: green;
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item:nth-child(3) {
+  background-color: rgb(245, 175, 23);
+}
+.admin .body-admin .admin-right .dash-num .dash-num-item:last-child {
+  background-color: #183135;
+}
+.admin .body-admin .admin-right .char {
+  margin: 40px 0;
+}
+.admin .body-admin .admin-left {
+  padding: 20px 0;
+  width: 20%;
+  background-color: #4334aa;
+  height: 100vh;
+}
+.admin .body-admin .admin-left .admin-left-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 40px;
+}
+.admin .body-admin .admin-left .list-option ul li {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 70px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin .body-admin .admin-left .list-option ul li:hover {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: white;
+  transition: 0.5s;
+}
+.admin .body-admin .admin-left .list-option ul li:hover span {
+  color: #1f1f6a;
+}
+.admin .body-admin .admin-left .list-option ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 150px 10px 0;
+}
+.admin .body-admin .admin-left .list-option ul li a .icon {
+  margin-right: 10px;
+}
+.admin .body-admin .admin-left .list-option ul li a span {
+  color: white;
+}/*# sourceMappingURL=adminPage.css.map */

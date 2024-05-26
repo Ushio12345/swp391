@@ -1,0 +1,192 @@
+$blue: #1f1f6a;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+}
+@mixin df() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    display: block;
+    width: 100%;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.admin {
+    .topbar {
+        @include df();
+        padding: 0 30px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        background-color: #fff;
+        height: 60px;
+        .logo {
+            @include df();
+            justify-content: center;
+            .logo-img {
+                width: 150px;
+            }
+            .nameapp {
+                p {
+                    margin: 0;
+                    font-weight: 700;
+                }
+            }
+        }
+        .search {
+            position: relative;
+            width: 50%;
+            height: 30px;
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+            input {
+                width: 100%;
+
+                border-radius: 10px;
+                padding-left: 20px;
+                height: 30px;
+            }
+        }
+        .notification {
+            .bell-icon {
+                position: relative;
+                i {
+                    color: rgb(246, 246, 12);
+                    font-size: 20px;
+                }
+                .number-notification {
+                    position: absolute;
+                    top: -10px;
+                    right: -15px;
+                    p {
+                        color: black;
+                        font-size: 12px;
+                        padding: 2px 3px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+
+        .user {
+            position: relative;
+            @include df();
+            justify-content: center;
+            p {
+                margin-bottom: 0;
+                margin-left: 30px;
+            }
+            img {
+                width: 50px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .body-admin {
+        display: flex;
+        .admin-right {
+            width: 80%;
+            padding: 70px;
+
+            .dash-num {
+                margin-top: 20px;
+                .dash-num-item {
+                    color: white;
+                    border-radius: 10px;
+                    padding: 20px;
+                    @include df();
+                    height: 150px;
+                    box-shadow: rgba(0, 0, 0, 0.47) 0px 5px 15px 0px;
+                    .dash-num-item-left {
+                        width: 50%;
+                        h3 {
+                            font-size: 50px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                    .dash-num-item-icon {
+                        i {
+                            font-size: 50px;
+                        }
+                    }
+                }
+                .dash-num-item:first-child {
+                    background-color: rgb(231, 38, 38);
+                }
+                .dash-num-item:nth-child(2) {
+                    background-color: green;
+                }
+                .dash-num-item:nth-child(3) {
+                    background-color: rgb(245, 175, 23);
+                }
+                .dash-num-item:last-child {
+                    background-color: #183135;
+                }
+            }
+            .char {
+                margin: 40px 0;
+            }
+        }
+        .admin-left {
+            padding: 20px 0;
+            width: 20%;
+            background-color: #4334aa;
+            height: 100vh;
+
+            .admin-left-title {
+                @include df();
+                width: 100%;
+                height: 70px;
+                margin-bottom: 40px;
+            }
+            .list-option {
+                ul li {
+                    margin-bottom: 20px;
+
+                    width: 100%;
+                    height: 70px;
+                    padding-left: 20px;
+                    &:hover {
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        background-color: white;
+                        transition: 0.5s;
+                    }
+                    &:hover span {
+                        color: #1f1f6a;
+                    }
+                    @include df();
+                    a {
+                        @include df();
+                        color: white;
+                        padding: 10px 150px 10px 0;
+                        .icon {
+                            margin-right: 10px;
+                        }
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -464,65 +464,6 @@ label.star:before {
 
 /* ---------------------------------booking detail --------------------------------------  */
 /* ======================================================================================= */
-.choice-group {
-  background-color: #317c69;
-}
-
-.detail-yard {
-  font-weight: 600;
-  padding: 70px 0;
-  width: 80%;
-  margin: 0 auto;
-}
-.detail-yard #hours,
-.detail-yard #day {
-  margin-left: 20px;
-}
-.detail-yard h1 {
-  font-size: 30px;
-  font-weight: 700;
-  color: #1f1f6a;
-}
-.detail-yard .choice-option select {
-  height: 37.6px;
-}
-.detail-yard .choice-option #booking-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-.detail-yard .container {
-  display: flex;
-  align-items: center;
-  margin: 50px 0;
-}
-.detail-yard .yard-left {
-  padding: 30px;
-}
-.detail-yard .yard-left h1 {
-  color: red;
-  margin-bottom: 30px;
-}
-.detail-yard .yard-left p {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 35px;
-}
-.detail-yard .yard-left span {
-  font-weight: 700;
-  font-size: 20px;
-}
-.detail-yard .yard-left a {
-  padding: 10px 30px;
-  background-color: #1f1f6a;
-  color: #eeeded;
-  border-radius: 20px;
-}
-.detail-yard .yard-left a:hover {
-  background-color: black;
-}
-
 .slot {
   margin: 20px 0;
 }
@@ -548,7 +489,7 @@ label.star:before {
 }
 
 .cmt {
-  background-color: #40e0d0;
+  background-color: #b3ece6;
   padding: 70px;
 }
 .cmt h4 {
@@ -559,7 +500,7 @@ label.star:before {
 
 .cmt-content i {
   font-size: 25px;
-  color: #f76401;
+  color: darkgreen;
 }
 
 .cmt-content h3 {

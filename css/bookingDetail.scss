@@ -5,12 +5,16 @@
 }
 
 .header {
-    position: relative;
     padding-bottom: 10px;
+    position: relative;
+    .search-name {
+        position: relative;
+    }
 }
 .detail-yard {
     width: 80%;
-    padding: 0;
+
+    padding: 100px 0;
     margin: 0 auto;
 
     h1 {
