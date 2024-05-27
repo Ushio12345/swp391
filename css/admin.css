@@ -20,12 +20,6 @@
   background-color: blue;
   color: white;
 }
-.admin .left ul li:hover a {
-  color: #f8f9fa;
-}
-.admin .left ul li a {
-  padding: 10px 0px 10px 10px;
-}
 .admin .right {
   width: 70%;
   margin: 0 auto;

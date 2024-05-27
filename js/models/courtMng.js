@@ -19,7 +19,7 @@ function renderCourtMng(listCourtMng) {
                 <td>${courtMng.courtMngName}</td>
                 <td>${courtMng.courtMngEmail}</td>
                 <td>${courtMng.phone}</td>
-                <td>${courtMng.courtID}</td>
+                
                 <td>
                     <button onclick="delProduct(${admin.id})" class="btn btn-danger mr-2">Xoá</button>
                     <button onclick="editProduct(${admin.id})" class="btn btn-primary">Sửa</button>

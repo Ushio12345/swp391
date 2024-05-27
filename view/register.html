@@ -39,9 +39,14 @@
                     <input type="password" placeholder="Nhập lại mật khẩu" id="re-password" required /><i id="lock" class="fa-solid fa-lock"></i>
                 </div>
                 <p id="wrong-repass" class="text-danger text-bold fw-bolder"></p>
-                <div class="remember-forgot">
+                <!-- <div class="remember-forgot">
                     <label for="remember"><input type="checkbox" />Nhớ mật khẩu</label>
                     <a href="">Quên mật khẩu</a>
+                </div> -->
+                <div class="role p-2">
+                    <label>Chọn vai trò:</label>
+                    <label for="guest"><input type="radio" name="role" value="guest" id="guest" required /> Khách</label>
+                    <label for="owner"><input type="radio" name="role" value="owner" id="owner" required /> Chủ sân</label>
                 </div>
                 <div class="btn">
                     <button type="submit">Đăng kí</button>

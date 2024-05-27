@@ -2,7 +2,7 @@ var facility = {
     facilityID: "CS1",
     facilityName: "Sân cầu lông Thảo Nguyên",
     facilityAddress: "TP. Hồ Chí Minh",
-
+    facilityOwnerID: "OW1",
     facilityOperating: "7:00 - 23:00",
     facilityEmail: "thaonguyenBabmindton@gmail.com",
     facilityPrice: "50.000 - 75.000",
@@ -18,17 +18,20 @@ function renderFacility(listFacility) {
         <tr>
                 <td>${i + 1}</td> <!-- Adding index as STT -->
                 <td>${facility.facilityID}</td>
+                   <td>${facility.facilityOwnerID}</td>
                 <td>${facility.facilityName}</td>
-                <td>${facility.facilityAddress}</td>
+               
                 <td>${facility.facilityEmail}</td>
-                <td>${facility.facilityOperating}</td>
-                 <td>${facility.facilityPrice}</td>
+              
+              
+              
          
-                <td>${facility.start}</td>
+              
                 <td>
                     <button onclick="delProduct('${facility.facilityID}')" class="btn btn-danger mr-2">Xoá</button>
                     <button onclick="editProduct('${facility.facilityID}')" class="btn btn-primary">Sửa</button>
                 </td>
+                <td><button onclick="showDetail('${facility.facilityID}')" class="icon-detail"><i class="fa-solid fa-circle-info"></i></button></td>
         </tr>
         `;
         facilityRow += facilityTr;

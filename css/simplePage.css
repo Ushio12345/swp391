@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: #1f1f6a;
+  padding: 10px 40px;
+  color: white;
+}
+.header .title h1 {
+  font-size: 20px;
+}
+.header .returnHome .icon i {
+  margin-right: 20px;
+}
+.header .returnHome .icon:hover {
+  color: chocolate;
+}
+.header .returnHome .backHome,
+.header .returnHome .searchYard {
+  width: 40%;
+}
+.header .searchYard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .searchYard input {
+  position: absolute;
+  right: -300px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 5px 10px;
+  color: black;
+  border-radius: 20px;
+  width: 300px;
+}
+.header .searchYard i {
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+}
+.header .searchYard i:hover {
+  background-color: white;
+  color: #1f1f6a;
+}
+.header .searchYard input.show {
+  animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 100px;
+    opacity: 1;
+  }
+}
+
+.status {
+  background-color: rgb(188, 188, 247);
+  text-align: center;
+  padding: 10px 0;
+}
+.status a {
+  padding: 0 30px;
+  position: relative;
+}
+.status a:hover {
+  color: #fb811e;
+}
+.status a::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #fb811e;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.status a:hover::before {
+  width: 100%;
+}
+
+.list-yard {
+  margin: 40px;
+}
+.list-yard .yard {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 40px;
+  background-color: rgba(128, 128, 128, 0.038);
+}
+.list-yard .yard .yard-info {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: left;
+}
+.list-yard .yard .yard-info h3 {
+  color: green;
+  font-weight: 600;
+  font-size: 25px;
+}
+.list-yard .yard .yard-info .yard-content {
+  margin-left: 20px;
+}
+.list-yard .yard .yard-info .yard-content textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  padding: 10px;
+}
+.list-yard .yard .yard-info .yard-content span {
+  font-weight: 700;
+  color: #fb811e;
+}
+
+/* footer------------------------------------------------------- */
+.footer {
+  padding: 40px;
+  background-color: rgba(39, 38, 38, 0.9058823529);
+  color: white;
+}
+
+.dinner img {
+  width: 250px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.footer p,
+.footer a {
+  font-size: 17px;
+  color: rgb(205, 197, 197);
+}
+
+.footer a:hover {
+  color: #f76401;
+  transition: 0.5s;
+}
+
+.dinner .social-media i {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: #f76401;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.dinner .social-media i:hover {
+  background-color: #f76401;
+  color: white;
+  transition: 0.5s;
+}
+
+.dinner .social-media i.hover:hover {
+  background-color: #f76401 !important;
+  color: white;
+  transition: 0.5s;
+}
+
+.social-media {
+  display: flex;
+}
+
+.contact input,
+.contact button {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.contact button {
+  background-color: #f76401;
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.footer span {
+  color: #f76401;
+  font-weight: 700;
+}/*# sourceMappingURL=simplePage.css.map */

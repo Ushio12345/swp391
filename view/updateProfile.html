@@ -12,7 +12,15 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="../css/updateProfile.css" />
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <style>
         form {
@@ -33,8 +41,37 @@
             width: 90px;
             margin-right: 20px;
         }
+        .returnHome {
+            background-color: #1f1f6a;
+            color: white;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 30px;
+        }
+        .returnHome a {
+            color: white;
+        }
+        .returnHome a:hover {
+            color: orange;
+        }
+        i {
+            margin-right: 20px;
+        }
     </style>
     <body>
+        <div class="returnHome">
+            <div class="icon">
+                <a href="HomePage.html"> <i class="fa-solid fa-arrow-left"></i>Về trang chủ</a>
+            </div>
+            <div class="login">
+                <!-- truyền avata và user-name nếu người dùng đã login  -->
+                <!-- nếu chưa login chuyển sang trang login  -->
+
+                <a href="login.html" class="logout">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+        </div>
         <form action="" class="w-50 m-auto" id="profile-form">
             <h1 class="text-center">THÔNG TIN TÀI KHOẢN</h1>
             <div class="mb-3">
@@ -53,7 +90,7 @@
                 <label for="password" class="form-label">Mật khẩu</label>
                 <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" value="" />
             </div>
-            <a href="">Xem lịch sử đặt sân</a>
+
             <button type="submit" class="btn btn-primary w-25">Lưu thay đổi</button>
             <a href="HomePage.html" class="text-center text-danger m-2">Trở về trang chủ</a>
         </form>
