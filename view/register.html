@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Đăng kí tài khoản</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -22,8 +22,25 @@
             referrerpolicy="no-referrer"
         />
         <!--css -->
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/login.css" />
     </head>
+      <div class="header-login-form">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header-login-form-left">
+                    <div class="logo-header-login">
+                        <img src="../img/logo-cau-long-dep-01.png" alt="" />
+                    </div>
+                    <div class="name-page">
+                        <p class="m-0">Đăng kí</p>
+                    </div>
+                </div>
+
+                <div class="header-login-form-right m-0">
+                    <a href="Guest.html">Trở về trang chủ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
     <div class="login-form" id="register-form">
         <div class="login-left">
             <img src="../img/logo-cau-long-dep-01.png" alt="" />
@@ -31,13 +48,21 @@
         <div class="login-right">
             <form action="">
                 <h1>Đăng kí</h1>
-                <div class="input-box"><input type="text" placeholder="Số điện thoại" required /><i class="fa-solid fa-user"></i></div>
-                <div class="input-box">
+            <div class="name-phone d-flex">
+                <div class="input-box" style="margin-right: 5px;"><input type="text" placeholder="Họ và tên" required /><i class="fa-solid fa-user"></i></div>
+                <div class="input-box"><input type="text" placeholder="Số điện thoại" required /><i class="fa-solid fa-phone"></i></div>
+            </div>
+                  <div class="input-box">
+                    <input type="email" placeholder="Email" id="email" required /><i class="fa-solid fa-envelope"></i></i>
+                </div>
+             <div class="input-pass " style="display: flex;">
+                   <div class="input-box " style="margin-right: 5px;">
                     <input type="password" placeholder="Mật Khẩu" id="password" required /><i id="lock" class="fa-solid fa-lock"></i>
                 </div>
                 <div class="input-box">
                     <input type="password" placeholder="Nhập lại mật khẩu" id="re-password" required /><i id="lock" class="fa-solid fa-lock"></i>
                 </div>
+             </div>
                 <p id="wrong-repass" class="text-danger text-bold fw-bolder"></p>
                 <!-- <div class="remember-forgot">
                     <label for="remember"><input type="checkbox" />Nhớ mật khẩu</label>
@@ -54,7 +79,7 @@
                 <hr />
                 <div class="login-with">
                     <div class="gmail">
-                        <button class="btn btn-danger p-2"><i class="fa-brands fa-google"></i> Đăng kí với Gmail</button>
+                        <button class="btn btn-danger p-2"><i class="fa-brands fa-google"></i> Đăng kí với Google</button>
                     </div>
                 </div>
                 <div class="register-link">
@@ -63,6 +88,54 @@
             </form>
         </div>
     </div>
+     <!-- footer -->
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="dinner col-lg-4 col-md-6">
+                        <img src="../img/logo-cau-long-dep-01.png" alt="" />
+                        <p class="mb-3">
+                            Hãy liên hệ với chúng tôi để biết thêm thông tin và đặt sân ngay hôm nay. Chúng tôi rất hân hạnh được đón tiếp bạn!
+                        </p>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://vn.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="category col-lg-2 col-md-6 col-sm-6">
+                        <h2>Khu vực</h2>
+                        <a href="">Bình Thạnh</a><br />
+                        <a href="">Tân Phú</a><br />
+                        <a href="">Quận 7</a><br />
+                        <a href="">TP. Thủ Đức</a>
+                    </div>
+
+                    <div class="archieve col-lg-2 col-md-6 col-sm-6">
+                        <h2>Liên hệ</h2>
+                        <p>
+                            <i class="fa-solid fa-phone"></i><br />
+                            0123456789
+                        </p>
+                        <p><i class="fa-solid fa-envelope"></i> forbadbooking@gmail.com</p>
+                    </div>
+
+                    <div class="contact col-lg-4 col-md-6">
+                        <h2>Đăng kí ngay để cảm nhận</h2>
+                        <p class="mb-4">Vui lòng nhập email của bạn <br />chúng tôi sẽ liên hệ trong thời gian sớm nhất</p>
+                        <input type="text" placeholder="Email của bạn" />
+                        <br />
+                        <button>Hoàn tất</button>
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <br />
+                <p>&#169; Tháng 5 2024 - Babminton Court Managerment System Team 4 - SWP391</p>
+            </div>
+        </section>
     <body>
         <!-- Bootstrap JavaScript Libraries -->
         <script

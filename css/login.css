@@ -1,12 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
 body {
   background-image: url("../img/4a331c1398d3d7a67ecba739d2e8bb43.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-attachment: s;
   min-height: 100vh;
+}
+
+h1 {
+  color: white;
 }
 
 a {
@@ -17,7 +29,38 @@ a:hover {
   color: #3dd9e9;
 }
 
+.header-login-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: rgba(46, 51, 48, 0.7882352941);
+  color: white;
+}
+.header-login-form .header-login-form-left {
+  display: flex;
+  align-items: center;
+}
+.header-login-form .header-login-form-left .logo-header-login {
+  width: 20%;
+}
+.header-login-form .header-login-form-left .name-page p {
+  font-size: 22px;
+}
+.header-login-form .header-login-form-right a {
+  color: white;
+  font-size: 20px;
+}
+.header-login-form .header-login-form-right a:hover {
+  color: orange;
+}
+
 .login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 100px auto;
   text-align: center;
   color: aliceblue;
   width: 50%;
@@ -31,14 +74,15 @@ a:hover {
   display: flex;
   align-items: center;
 }
-.login-form .login-left,
 .login-form .login-right {
   width: 50%;
 }
 .login-form .login-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 50%;
+}
+.login-form .login-left img {
+  width: 100%;
+  height: 400px;
 }
 
 .login-form .input-box {
@@ -57,6 +101,7 @@ a:hover {
   border: none;
   outline: none;
   border-bottom: 1px solid aliceblue;
+  color: white;
 }
 .input-box input::-moz-placeholder {
   color: aliceblue;
@@ -84,7 +129,7 @@ a:hover {
   padding: 20px 0 0;
 }
 .btn button {
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
   height: 40px;
   border: none;

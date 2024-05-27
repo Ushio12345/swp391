@@ -15,7 +15,6 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* Example usage */
 .button {
   background-image: linear-gradient(to right, #8360c3, #2ebf91);
   color: white;
@@ -31,6 +30,7 @@ body {
 h1 {
   color: #317c69;
   font-weight: 600;
+  position: relative;
 }
 
 .header {
@@ -120,6 +120,7 @@ h1 {
   }
 }
 .header .header-top .search-name {
+  margin-right: 30px;
   position: relative;
 }
 .header .header-top .search-name input {
@@ -130,10 +131,10 @@ h1 {
   font-size: 20px;
 }
 .header .header-top .search-name i {
-  position: relative;
+  position: absolute;
   top: 50%;
-  right: 25px;
-  transform: translate(-50%);
+  right: 15px;
+  transform: translateY(-50%);
   color: #000000;
 }
 .header .header-bot {
@@ -179,7 +180,18 @@ h1 {
 .header .header-bot a.active::before {
   width: 100%;
 }
-.header .header-bot #sorted {
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.filter #sorted {
   width: 200px;
   padding: 5px;
   font-size: 16px;
@@ -187,13 +199,21 @@ h1 {
   border-radius: 4px;
   color: #000000;
 }
-.header .header-bot #sorted option {
+.filter a,
+.filter p {
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+.filter #sorted option {
   padding: 5px;
 }
-.header .locGio {
+.filter .locGio {
   position: relative;
 }
-.header .locGio .filter-time {
+.filter .locGio .filter-time {
   display: none;
   position: absolute;
   background-color: rgba(31, 31, 106, 0.631372549);
@@ -202,20 +222,20 @@ h1 {
   margin: 0;
   border: 1px solid #ccc;
 }
-.header .locGio .filter-time li {
+.filter .locGio .filter-time li {
   margin: 5px 0;
   padding: 5px 0;
-  width: 100%;
+  width: 200px;
 }
-.header .locGio .filter-time li:hover {
+.filter .locGio .filter-time li:hover {
   background-color: #598d93;
 }
-.header .locGio .filter-time a {
+.filter .locGio .filter-time a {
   color: #fff;
   text-decoration: none;
   width: 100%;
 }
-.header .locGio:hover .filter-time {
+.filter .locGio:hover .filter-time {
   display: block;
 }
 
@@ -322,8 +342,27 @@ label.star:before {
 .yard {
   text-align: center;
   font-size: 30px;
+  font-weight: 600;
   border-bottom: 3px solid black;
   padding: 40px 0;
+}
+.yard h1::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 10%;
+  background-color: black;
+  width: 20%;
+  height: 3px;
+}
+.yard h1::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10%;
+  background-color: black;
+  width: 20%;
+  height: 3px;
 }
 .yard .card-yard {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -370,6 +409,24 @@ label.star:before {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 20px;
 }
+.yard[data-index="1"] .list-yard h1::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 10%;
+  background-color: black;
+  width: 20%;
+  height: 3px;
+}
+.yard[data-index="1"] .list-yard h1::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10%;
+  background-color: black;
+  width: 20%;
+  height: 3px;
+}
 .yard[data-index="1"] .list-yard .card-yard:nth-child(2), .yard[data-index="1"] .list-yard .card-yard:nth-child(3) {
   display: flex;
   align-items: center;
@@ -392,8 +449,8 @@ label.star:before {
 }
 
 .dinner img {
-  width: 250px;
-  height: 100px;
+  width: 100%;
+  height: 150px;
   margin: 0 auto;
 }
 
