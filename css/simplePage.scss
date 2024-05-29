@@ -140,6 +140,35 @@ body {
         }
     }
 }
+// detail .order
+
+.detail-order {
+    form {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 30px;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 700;
+        }
+        button {
+            margin: 0 auto;
+        }
+    }
+    .user-acc img {
+        border-radius: 50%;
+        width: 90px;
+        margin-right: 20px;
+    }
+    .m-auto {
+        padding-top: 200px;
+    }
+}
+
 // footer
 /* footer------------------------------------------------------- */
 .footer {

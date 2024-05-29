@@ -134,6 +134,31 @@ body {
   color: #fb811e;
 }
 
+.detail-order form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detail-order form h1 {
+  font-size: 30px;
+}
+.detail-order form a {
+  text-decoration: none;
+  font-weight: 700;
+}
+.detail-order form button {
+  margin: 0 auto;
+}
+.detail-order .user-acc img {
+  border-radius: 50%;
+  width: 90px;
+  margin-right: 20px;
+}
+.detail-order .m-auto {
+  padding-top: 200px;
+}
+
 /* footer------------------------------------------------------- */
 .footer {
   padding: 40px;

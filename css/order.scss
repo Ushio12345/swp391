@@ -1,0 +1,23 @@
+.detail-order {
+    padding: 30px 0;
+    .order {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    span {
+        font-weight: 700;
+    }
+    .type-booking,
+    .month,
+    .booked,
+    .price,
+    .paying {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.header {
+    position: relative;
+    padding-bottom: 20px;
+}
