@@ -110,6 +110,8 @@
                                     <span class="title">Quản lý Nhân viên</span>
                                 </a>
                             </li>
+
+                            <a href="login.html" class="w-75 m-auto logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
                         </ul>
                     </div>
                 </div>
@@ -169,10 +171,7 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         <!-- BEGIN BUTTOM THÊM MỚI -->
-                                        <button id="" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                                            <i class="fa fa-plus mr-1"></i>
-                                            Thêm Mới
-                                        </button>
+
                                         <!-- END BUTTON THÊM MỚI -->
                                     </div>
                                     <div class="col-md-4">
@@ -300,6 +299,7 @@
                                             <th>Email</th>
 
                                             <th>Thao tác</th>
+
                                             <th class="text-center">Chi tiết</th>
                                         </thead>
                                         <tbody id="tblDSCoSo"></tbody>
@@ -311,7 +311,7 @@
                         </div>
                         <div class="tab-pane fade" id="dsKhachHang" role="tabpanel">
                             <!--Danh sách sản phẩm -->
-                            <div role="tabpanel" class="tab-pane in active" id="dsKhachHang">
+                            <div role="tabpanel" class="tab-pane" id="dsKhachHang">
                                 <div class="row">
                                     <div class="col-md-8">
                                         <!-- BEGIN BUTTOM THÊM MỚI -->
@@ -348,7 +348,7 @@
                                             <th>Tên</th>
                                             <th>Email</th>
                                             <th>Số điện thoại</th>
-                                            <th>Cơ sở</th>
+
                                             <th>Thao tác</th>
                                         </thead>
                                         <tbody id="tbkDSKH"></tbody>
@@ -358,6 +358,7 @@
                                 <br />
                             </div>
                         </div>
+
                         <div class="tab-pane fade" id="dsStaff" role="tabpanel">
                             <!--Danh sách sản phẩm -->
                             <div role="tabpanel" class="tab-pane in active" id="dsStaff">
@@ -395,12 +396,12 @@
                                             <th>STT</th>
                                             <th>ID</th>
                                             <th>Tên</th>
-
+                                            <!-- <th>Cơ sở làm việc</th> -->
                                             <th>Số điện thoại</th>
                                             <th>Email</th>
                                             <th>Thao tác</th>
                                         </thead>
-                                        <tbody id="tbDSStaff"></tbody>
+                                        <tbody id="tblStaff"></tbody>
                                     </table>
                                     <!-- END TABLE SẢN PHẨM -->
                                 </div>
@@ -445,6 +446,65 @@
                         </div>
                         <!-- Modal footer -->
                         <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal" id="detailCourt">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Chi tiết thông tin cơ sở</h4>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">ID cơ sở</div>
+                                <div class="detailCourt-right">CS1</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">ID chủ cơ sở</div>
+                                <div class="detailCourt-right">OW1</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Email chủ cơ sở</div>
+                                <div class="detailCourt-right">anhq@gmail.com</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Tên cơ sở</div>
+                                <div class="detailCourt-right">Sân cầu lông Thảo Nguyên</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Email cơ sở</div>
+                                <div class="detailCourt-right">thaonguyenBadminton@gmail.com</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Giờ hoạt động</div>
+                                <div class="detailCourt-right">7:00 - 23:00</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Giá giao động / giờ</div>
+                                <div class="detailCourt-right">70.000 - 100.000</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Đánh giá</div>
+                                <div class="detailCourt-right">4 / 5</div>
+                            </div>
+                            <div class="detailCourt">
+                                <div class="deatilCourt-left">Nhận xét</div>
+                                <div class="detailCourt-right">Sân đẹp, thoáng mát</div>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -508,6 +568,7 @@
         <script src="../js/managerScreen.js"></script>
         <script src="../js/models/courtMng.js"></script>
         <script src="../js/models/staff.js"></script>
+        <script src="../js/models/customer.js"></script>
         <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -21,8 +21,9 @@ function renderCourtMng(listCourtMng) {
                 <td>${courtMng.phone}</td>
                 
                 <td>
-                    <button onclick="delProduct(${admin.id})" class="btn btn-danger mr-2">Xoá</button>
+                 
                     <button onclick="editProduct(${admin.id})" class="btn btn-primary">Sửa</button>
+                       <button onclick="delProduct(${admin.id})" class="btn btn-danger mr-2">Xoá</button>
                 </td>
         </tr>
         `;

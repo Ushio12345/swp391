@@ -230,4 +230,8 @@
 
 .slot.out-slot {
   background-color: red;
+}
+
+.past-slot {
+  background-color: #f2f2f2; /* Light gray background */
 }/*# sourceMappingURL=bookingDetail.css.map */

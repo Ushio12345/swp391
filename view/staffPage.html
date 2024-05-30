@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quản lí check in</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS v5.3.2 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- tailwind -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.css"
+            integrity="sha512-z66y0PypNStA/ynlSM3kk1/SDr1n7pIBpQO86uxkHAtBYOJJzXAAFq9rjFz8Egh25cpv3EPcrS4Y8nVHyKB9Dw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- google font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- link css -->
+        <link rel="stylesheet" href="../css/staffPage.css" />
+        <!-- char js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body>
+        <section class="admin">
+            <div class="topbar">
+                <div class="logo">
+                    <div class="logo-img"><img src="../images/logo-cau-long-dep-01.png" alt="" /></div>
+                    <div class="nameapp">
+                        <p>ForBaB</p>
+                    </div>
+                </div>
+                <select class="dsCoso btn btn-outline-dark">
+                    <option>Chọn cơ sở</option>
+                    <option>Sân Bình Châu</option>
+                    <option>Sân Thủ Đức</option>
+                </select>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm tại đây." id="search" />
+                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </div>
+                <div class="notification">
+                    <div class="bell-icon">
+                        <i class="fa-solid fa-bell"></i>
+                        <div class="number-notification">
+                            <b>10</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="../images/v17_23.png" alt="" />
+                    <p>Hello, Tiến</p>
+                </div>
+            </div>
+            <div class="body-admin">
+                <div class="admin-left">
+                    <div class="list-option">
+                        <ul class="listManaher nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#manage-checkin" data-bs-toggle="tab">
+                                    <span class="icon"><i class="fa-solid fa-computer"></i></span>
+                                    <span class="title">Quản lý check in</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#feedback" data-bs-toggle="tab">
+                                    <span class="icon"><i class="fa-solid fa-comments"></i></span>
+                                    <span class="title">Phản hồi khách hàng</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#account" data-bs-toggle="tab">
+                                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                                    <span class="title">Tài khoản</span>
+                                </a>
+                            </li>
+
+                            <button class="logout btn btn-danger btn-block" href="#logout" data-bs-toggle="tab" style="width: 75%; margin: 0 auto">
+                                <span class="icon"><i class="fa-solid fa-sign-out-alt"></i></span>
+                                <span class="title">Đăng xuất</span>
+                            </button>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admin-right">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="manage-checkin" role="tabpanel">
+                            <!-- Content for Quản lý check in -->
+                            <div class="filter-manage-checkin">
+                                <select class="btn btn-success">
+                                    <option value="">Chọn sân</option>
+                                    <option value="1">Sân 1</option>
+                                    <option value="2">Sân 2</option>
+                                </select>
+                                <div class="status">
+                                    <a class="nav-link active" href="">Đang chờ check in</a>
+                                    <a class="nav-link" href="">Đã check in</a>
+                                    <a class="nav-link" href="">Đã hủy</a>
+                                </div>
+                            </div>
+                            <div class="tblAdmin" id="tblAdmin">
+                                <!-- BEGIN TABLE SẢN PHẨM -->
+                                <table class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <th scope="col">Mã đơn</th>
+                                        <th scope="col">Mã khách hàng</th>
+                                        <th scope="col">Ngày</th>
+                                        <th scope="col">Thứ</th>
+                                        <th scope="col">Slot</th>
+                                        <th scope="col">Thao tác</th>
+                                    </thead>
+                                    <tbody id="tbDSAdmin">
+                                        <tr>
+                                            <td>HD001</td>
+                                            <td>KH001</td>
+                                            <td>05/06/2024</td>
+                                            <td>Thứ Tư</td>
+                                            <td>1</td>
+                                            <td><button class="btn btn-primary">Check in</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HD002</td>
+                                            <td>KH002</td>
+                                            <td>03/06/2024</td>
+                                            <td>Thứ Hai</td>
+                                            <td>3</td>
+                                            <td><button class="btn btn-primary">Check in</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HD003</td>
+                                            <td>KH003</td>
+                                            <td>03/06/2024</td>
+                                            <td>Thứ Tư</td>
+                                            <td>4</td>
+                                            <td><button class="btn btn-primary">Check in</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HD001</td>
+                                            <td>KH004</td>
+                                            <td>04/06/2024</td>
+                                            <td>Thứ Ba</td>
+                                            <td>4</td>
+                                            <td><button class="btn btn-primary">Check in</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- END TABLE SẢN PHẨM -->
+                            </div>
+                            <br />
+                        </div>
+                        <div class="tab-pane fade" id="feedback" role="tabpanel">
+                            <!--Danh sách sản phẩm -->
+                            <div role="tabpanel" class="tab-pane in active" id="feedback">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <!-- BEGIN BUTTOM THÊM MỚI -->
+                                        <div class="status">
+                                            <a class="nav-link" href=""
+                                                >Tất cả nhận xét<span>
+                                                    <div class="number-notification"><b>4</b></div>
+                                                </span></a
+                                            >
+                                        </div>
+
+                                        <!-- END BUTTON THÊM MỚI -->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- BEGIN TÌM KIẾM -->
+                                        <div class="input-group mb-3">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Nhập từ khóa"
+                                                aria-label="Recipient's username"
+                                                aria-describedby="basic-addon2"
+                                            />
+                                            <div class="input-group-append">
+                                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                            </div>
+                                        </div>
+                                        <!-- END TÌM KIẾM -->
+                                    </div>
+                                </div>
+                                <div class="comments">
+                                    <div class="left">
+                                        <table class="table table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Tiến Minh đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>29/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Hue đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>13/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Trang Ha và 3 người khác đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>20/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Phuong Ly và 5 người khác đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>19/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Hải Ninh đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>13/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Minh Anh đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>11/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Sân của bạn có nhận xét mới</h5>
+                                                                    <p>Phi Vũ đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>08/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="comment">
+                                                            <a class="comment-content" href="#">
+                                                                <div class="main-content">
+                                                                    <h5>Bạn có nhận xét mới từ Sân 3</h5>
+                                                                    <p>Sói Cô Độc đã nhận xét về sân của bạn.</p>
+                                                                </div>
+                                                                <div class="date">
+                                                                    <p>05/05/2024</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="card-yard">
+                                        <div class="card-yard-img">
+                                            <img src="../images/san-cau-thien-minh-quan-11.jpg" alt="" />
+                                        </div>
+                                        <div class="card-yard-content">
+                                            <p>Tên sân: Sân Bình Châu</p>
+                                            <p>Giá tiền: 70.000 VND</p>
+                                            <p>Giờ mở cửa: 7:00 - 20:00</p>
+                                        </div>
+                                        <hr />
+                                        <div class="feedback">
+                                            <table class="user-feedback table table-striped table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="comment">
+                                                                <div class="user-avatar">
+                                                                    <img src="../images/nguyen-tien-minh.jpg" alt="User Avatar" />
+                                                                </div>
+                                                                <div class="comment-details">
+                                                                    <div class="comment-header">
+                                                                        <h5>Tiến Minh</h5>
+                                                                        <p>29/05 13:00</p>
+                                                                    </div>
+                                                                    <div class="comment-body">
+                                                                        <p>Sân rất tốt, chơi rất đã.</p>
+                                                                    </div>
+                                                                    <div class="response">
+                                                                        <p>Trả lời</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="comment">
+                                                                <div class="user-avatar">
+                                                                    <img src="../images/download (1).jpg" alt="User Avatar" />
+                                                                </div>
+                                                                <div class="comment-details">
+                                                                    <div class="comment-header">
+                                                                        <h5>Thu Hà</h5>
+                                                                        <p>27/05 11:00</p>
+                                                                    </div>
+                                                                    <div class="comment-body">
+                                                                        <p>Sân tốt lắm luôn ý, có cái hơi ít sân nha</p>
+                                                                    </div>
+                                                                    <div class="response">
+                                                                        <p>Trả lời</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="comment">
+                                                                <div class="user-avatar">
+                                                                    <img src="../images/avatar-trang-4.jpg" alt="User Avatar" />
+                                                                </div>
+                                                                <div class="comment-details">
+                                                                    <div class="comment-header">
+                                                                        <h5>Hải Ninh</h5>
+                                                                        <p>23/05 9:00</p>
+                                                                    </div>
+                                                                    <div class="comment-body">
+                                                                        <p>very good</p>
+                                                                    </div>
+                                                                    <div class="response">
+                                                                        <p>Trả lời</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="comment">
+                                                                <div class="user-avatar">
+                                                                    <img src="../images/avatar-trang-4.jpg" alt="User Avatar" />
+                                                                </div>
+                                                                <div class="comment-details">
+                                                                    <div class="comment-header">
+                                                                        <h5>Văn Tiến</h5>
+                                                                        <p>27/05 20:03</p>
+                                                                    </div>
+                                                                    <div class="comment-body">
+                                                                        <p>toi rat thich san này, good</p>
+                                                                    </div>
+                                                                    <div class="response">
+                                                                        <p>Trả lời</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="comment">
+                                                                <div class="user-avatar">
+                                                                    <img src="../images/avatar-trang-4.jpg" alt="User Avatar" />
+                                                                </div>
+                                                                <div class="comment-details">
+                                                                    <div class="comment-header">
+                                                                        <h5>Hue</h5>
+                                                                        <p>13/05 10:03</p>
+                                                                    </div>
+                                                                    <div class="comment-body">
+                                                                        <p>hài lòng</p>
+                                                                    </div>
+                                                                    <div class="response">
+                                                                        <p>Trả lời</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- Add more comments as needed -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade in active" id="account" role="tabpanel">
+                            <!--Danh sách sản phẩm -->
+                            <div role="tabpanel" class="tab-pane in active" id="account">
+                                <form action="" class="w-50 m-auto" id="profile-form">
+                                    <h1 class="text-center">THÔNG TIN TÀI KHOẢN</h1>
+                                    <div class="mb-3">
+                                        <label for="staffId" class="form-label">Mã Nhân Viên</label>
+                                        <input type="text" class="form-control" id="staffId" value="NV001" readonly />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Họ và Tên</label>
+                                        <input type="text" class="form-control" id="username" value="Trần Văn Tiến" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" value="tientv@gmail.com" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Số điện thoại</label>
+                                        <input type="number" class="form-control" id="phone" value="0967323129" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Mật khẩu</label>
+                                        <input type="password" class="form-control" id="password" value="********" readonly />
+                                        <span><a href="">Đổi mật khẩu</a></span>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-25">Lưu thay đổi</button>
+                                    <a href="HomePage.html" class="text-center text-danger m-2">Trở về trang chủ</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-admin">
+                <p>&#169; Badminton Court Management - Team 4 - SWP391</p>
+            </div>
+        </section>
+        <script>
+            // Lắng nghe sự kiện click trên các liên kết trạng thái
+            document.querySelectorAll(".status .nav-link").forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    // Xóa class 'active' khỏi tất cả các liên kết
+                    document.querySelectorAll(".status .nav-link").forEach(function (navLink) {
+                        navLink.classList.remove("active");
+                    });
+
+                    // Thêm class 'active' vào liên kết được nhấp
+                    this.classList.add("active");
+
+                    // Thay đổi nội dung trong phần body của bảng tùy thuộc vào trạng thái được chọn
+                    var status = this.textContent;
+                    var tbody = document.querySelector("#tbDSAdmin");
+                    tbody.innerHTML = ""; // Xóa nội dung hiện tại của tbody
+
+                    if (status === "Đang chờ check in") {
+                        // Hiển thị chỉ các đơn hàng đang chờ check in
+                        tbody.innerHTML = `
+                <tr>
+                    <td>HD001</td>
+                    <td>KH001</td>
+                    <td>05/06/2024</td>
+                    <td>Thứ Tư</td>
+                    <td>1</td>
+                    <td><button class="btn btn-primary">Check in</button></td>
+                </tr>
+                <tr>
+                    <td>HD002</td>
+                    <td>KH002</td>
+                    <td>03/06/2024</td>
+                    <td>Thứ Hai</td>
+                    <td>3</td>
+                    <td><button class="btn btn-primary">Check in</button></td>
+                </tr>
+                <tr>
+                    <td>HD003</td>
+                    <td>KH003</td>
+                    <td>03/06/2024</td>
+                    <td>Thứ Tư</td>
+                    <td>4</td>
+                    <td><button class="btn btn-primary">Check in</button></td>
+                </tr>
+                <tr>
+                    <td>HD001</td>
+                    <td>KH004</td>
+                    <td>04/06/2024</td>
+                    <td>Thứ Ba</td>
+                    <td>4</td>
+                    <td><button class="btn btn-primary">Check in</button></td>
+                </tr>
+            `;
+                    } else if (status === "Đã check in") {
+                        tbody.innerHTML = `
+                <tr>
+                    <td>HD001</td>
+                    <td>KH001</td>
+                    <td>22/05/2024</td>
+                    <td>Thứ Tư</td>
+                    <td>1</td>
+                    <td><button class="btn btn-primary" disabled>Đã check in</button></td>
+                </tr>
+                <tr>
+                    <td>HD002</td>
+                    <td>KH002</td>
+                    <td>26/05/2024</td>
+                    <td>Thứ Hai</td>
+                    <td>3</td>
+                    <td><button class="btn btn-primary" disabled>Đã check in</button></td>
+                </tr>               
+            `;
+                    } else if (status === "Đã hủy") {
+                        tbody.innerHTML = `
+                <tr>
+                    <td>HD001</td>
+                    <td>KH005</td>
+                    <td>05/06/2024</td>
+                    <td>Thứ Tư</td>
+                    <td>2</td>
+                    <td><button class="btn btn-danger" disabled>Đã hủy</button></td>
+                </tr>
+                <tr>
+                    <td>HD002</td>
+                    <td>KH007</td>
+                    <td>03/06/2024</td>
+                    <td>Thứ Hai</td>
+                    <td>6</td>
+                    <td><button class="btn btn-danger" disabled>Đã hủy</button></td>
+                </tr>               
+            `;
+                    }
+                });
+            });
+
+            var navLinks = document.querySelectorAll(".nav-item .nav-link");
+
+            navLinks.forEach(function (navLink) {
+                navLink.addEventListener("click", function () {
+                    navLinks.forEach(function (link) {
+                        link.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+                });
+            });
+        </script>
+
+        <!-- model js -->
+        <script src="../js/models/admin.js"></script>
+        <script src="../js/models/facility.js"></script>
+        <script src="../js/managerScreen.js"></script>
+        <script src="../js/models/courtMng.js"></script>
+        <script src="../js/models/staff.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -38,8 +38,9 @@ function renderStaff(staffList) {
                     !isStaffMng
                         ? `
                 <td>
-                    <button onclick="delProduct('${staff.id}')" class="btn btn-danger mr-2">Xoá</button>
+                   
                     <button onclick="editProduct('${staff.id}')" class="btn btn-primary">Sửa</button>
+                     <button onclick="delProduct('${staff.id}')" class="btn btn-danger mr-2">Xoá</button>
                 </td>
                 `
                         : ""

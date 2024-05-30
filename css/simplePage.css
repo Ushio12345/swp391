@@ -73,9 +73,11 @@ body {
 }
 
 .status {
-  background-color: rgb(188, 188, 247);
   text-align: center;
   padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .status a {
   padding: 0 30px;

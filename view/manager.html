@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trang quản lí</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.css"
+        integrity="sha512-z66y0PypNStA/ynlSM3kk1/SDr1n7pIBpQO86uxkHAtBYOJJzXAAFq9rjFz8Egh25cpv3EPcrS4Y8nVHyKB9Dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- link css -->
+    <link rel="stylesheet" href="../css/manager.css" />
+    <!-- char js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <section class="manager">
+        <div class="topbar">
+            <div class="logo">
+                <div class="logo-img"><img src="../img/logo-cau-long-dep-01.png" alt="" /></div>
+                <div class="nameapp">
+                    <p>ForBaB</p>
+                </div>
+            </div>
+            <div class="select-branch">
+                <select id="branch-select">
+                    <option value="">Thủ Đức</option>
+                    <option value="1">Gò Vấp</p>
+                    </option>
+                    <option value="2">Bình Thạnh</option>
+                    <option value="3">Tân Bình</option>
+                </select>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm tại đây." id="search" />
+                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            </div>
+            <div class="notification">
+                <div class="bell-icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="number-notification">
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="login">
+                <a href="updateProfile.html" class="user">
+                    <img src="../img/download (user).jpg" alt="" />
+                </a>
+                <p class="user-name">Welcome,Ushio</p>
+            </div>
+        </div>
+
+
+        <div class="body-manager">
+            <div class="manager-left">
+                <div class="list-option">
+                    <ul class="listManaher nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#dsDashboard" data-bs-toggle="tab">
+                                <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                                <span class="title">Thống kê</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dsOrder" href="#dsOrder2" data-bs-toggle="tab">
+                                <span class="icon"><i class="fa-solid fa-user-tie"></i></span>
+                                <span class="title">Quản lý đơn đặt hàng</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dsStaff" data-bs-toggle="tab">
+                                <span class="icon"><i class="fa-solid fa-computer"></i></span>
+                                <span class="title">Quản lý Nhân viên</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dsCoSo" data-bs-toggle="tab">
+                                <span class="icon"><i class="fa-solid fa-shop"></i></span>
+                                <span class="title">Quản lý Cơ Sở</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dsYard" data-bs-toggle="tab">
+                                <span class="icon"><i class="fa-solid fa-circle-user"></i></span>
+                                <span class="title">Quản lý Sân</span>
+                            </a>
+                        </li>
+
+                        <a class="w-75 logout m-auto text-center" href="login.html">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="title">Đăng xuất</span>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="manager-right">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="dsDashboard" role="tabpanel">
+                        <div class="dash-num grid grid-cols-4 gap-4">
+                            <div class="dash-num-item">
+                                <div class="dash-num-item-left">
+                                    <h3>100</h3>
+                                    <p>Lượt truy cập mỗi ngày</p>
+                                </div>
+                                <div class="dash-num-item-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+
+                            <div class="dash-num-item">
+                                <div class="dash-num-item-left">
+                                    <h3>20</h3>
+                                    <p>Chi nhánh</p>
+                                </div>
+                                <div class="dash-num-item-icon">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                            </div>
+
+                            <div class="dash-num-item">
+                                <div class="dash-num-item-left">
+                                    <h3>30</h3>
+                                    <p>Đơn / ngày</p>
+                                </div>
+                                <div class="dash-num-item-icon">
+                                    <i class="fa-solid fa-file-invoice"></i>
+                                </div>
+                            </div>
+
+                            <div class="dash-num-item">
+                                <div class="dash-num-item-left">
+                                    <h3>10 tr</h3>
+                                    <p>Doanh thu / ngày</p>
+                                </div>
+                                <div class="dash-num-item-icon">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="char">
+                            <canvas id="chardoanhthuthang" width="vw-100" height=""></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="dsOrder" role="tabpanel">
+                        <!-- Content for dsOrder -->
+                        <div role="tabpanel" class="tab-pane" id="dsOrder">
+                            <div class="row mb-4">
+                                <div class="col-md-8">
+                                    <!-- BEGIN BUTTOM THÊM MỚI -->
+                                    <div class="btn-order">
+                                        <button id="" class="btn btn-success" data-toggle="tab" href="#dsOrder">
+                                            <i class=""></i>
+                                            Đơn cố định
+                                        </button>
+                                        <button id="" class="btn btn-success" data-toggle="tab" href="#dsOrder2">
+                                            <i class=""></i>
+                                            Đơn ngày
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="search col-lg-4">
+                                    <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Nhập từ khóa"
+                                            aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="basic-addon2"><i
+                                                    class="fa fa-search"></i></span>
+                                        </div>
+                                    </div>
+                                    <!-- END TÌM KIẾM -->
+                                </div>
+                            </div>
+                            <div class="btn-select d-flex align-items-center justify-content-start mb-4">
+                                <!--                                        
+                                            <select id="branch-select">
+                                              <option value="">Cơ sở</option>
+                                              <option value="1">Thủ Đức</option>
+                                              <option value="2">Bình Thạnh</option>
+                                              <option value="3">Tân Bình</option>
+                                            </select> -->
+
+
+                                <select id="branch-select">
+                                    <option value="">Tháng</option>
+                                    <option value="1">Tháng 1</option>
+                                    <option value="2">Tháng 2</option>
+                                    <option value="3">Tháng 3</option>
+                                    <option value="4">Tháng 4</option>
+                                    <option value="5">Tháng 5</option>
+                                    <option value="6">Tháng 6</option>
+                                    <option value="7">Tháng 7</option>
+                                    <option value="8">Tháng 8</option>
+                                    <option value="9">Tháng 9</option>
+                                    <option value="10">Tháng 10</option>
+                                    <option value="11">Tháng 11</option>
+                                    <option value="12">Tháng 12</option>
+                                </select>
+
+
+
+                            </div>
+
+                            <div class="status-btn d-flex align-items-center justify-content-between">
+                                <div class="status">
+                                    <a class="nav-link active" href="">Đang chờ duyệt</a>
+                                    <a class="nav-link" href="">Chờ check-in</a>
+                                    <a class="nav-link" href="">Đã check-in</a>
+
+                                    <div class="check-all">
+                                        <button id="" class="btn btn-warning" data-toggle="modal" href="">
+                                            <i class=""></i>
+                                            Duyệt tất cả
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END BUTTON THÊM MỚI -->
+                        </div>
+                        
+
+                        <div class="clear-fix"></div>
+                        <div class="tblOrder" id="tblOrder">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <th>STT</th>
+                                    <th>Mã Đơn</th>
+                                    <th>Mã Khách</th>
+                                    <th>Sân</th>
+                                    <th>Số buổi</th>
+
+                                    <th>Thao tác</th>
+                                    <th>Chi tiết</th>
+                                </thead>
+                                <tbody id="tbDSOrder"></tbody>
+                            </table>
+                            <!-- END TABLE SẢN PHẨM -->
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dsCoSo" role="tabpanel">
+                    <!--Danh sách sản phẩm -->
+                    <div role="tabpanel" class="tab-pane" id="dsCoSo">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <!-- BEGIN BUTTOM THÊM MỚI -->
+                                <button id="btnThemCoSo" class="btn btn-success" data-toggle="modal"
+                                    data-target="#myCoSo">
+                                    <i class="fa fa-plus mr-1"></i>
+                                    Thêm Mới
+                                </button>
+                                <!-- END BUTTON THÊM MỚI -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- BEGIN TÌM KIẾM -->
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Nhập từ khóa"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2"><i
+                                                class="fa fa-search"></i></span>
+                                    </div>
+                                </div>
+                                <!-- END TÌM KIẾM -->
+                            </div>
+                        </div>
+                        <div class="clear-fix"></div>
+                        <div class="tblCoSo" id="tblCoSo">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <th>STT</th>
+                                    <th>Mã cơ sở</th>
+                                    <th>Tên Cơ Sở</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Giờ làm việc</th>
+                                    <th>Số sân</th>
+                                    <th>Đánh giá</th>
+                                    <th>Thao tác</th>
+                                </thead>
+                                <tbody id="tblDSCoSo2"></tbody>
+                            </table>
+                            <!-- END TABLE SẢN PHẨM -->
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dsYard" role="tabpanel">
+                    <!--Danh sách sản phẩm -->
+                    <div role="tabpanel" class="tab-pane in active" id="dsYard">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <!-- BEGIN BUTTOM THÊM MỚI -->
+                                <button id="btnThemKH" class="btn btn-success" data-toggle="modal"
+                                    data-target="#myModal">
+                                    <i class="fa fa-plus mr-1"></i>
+                                    Thêm slot
+                                </button>
+                                <button id="btnThemKH" class="btn btn-success" data-toggle="modal"
+                                    data-target="#myModal">
+                                    <i class="fa fa-plus mr-1"></i>
+                                    Thêm sân
+                                </button>
+                                <!-- END BUTTON THÊM MỚI -->
+                            </div>
+                       
+                       
+                            <div class="col-md-4">
+                            <!-- BEGIN TÌM KIẾM -->
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Nhập từ khóa"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                </div>
+                                    </div>
+                            <!-- END TÌM KIẾM -->
+                        </div>
+                    </div>
+                        <div class="list-yard">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#san1">Sân 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#san2">Sân 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#san3">Sân 3</a>
+                                </li>
+                            </ul>
+
+
+                            <!-- truyen du lieu cac san -->
+                            <div class="tab-content">
+                                <div class="tab-pane container active" id="san1">
+                                    <!-- truyền nội dung cho sân 1 -->
+                                       <div class="tblYard" id="tblYard">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+
+                    <div class="row">
+                                <div class="col-lg-7 col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <th colspan="4" class="h1">Sân 1</th>
+                                        </thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Slot</th>
+                                            <th>Cơ sở</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <th colspan="3" class="h1">Slot</th>
+                                        </thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Khung giờ</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                                </div>
+                                <div class="tab-pane container fade" id="san2">
+                                    <!-- truyền nội dung cho sân 2 -->
+                                       <div class="tblYard" id="tblYard">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+
+                    <div class="row">
+                                <div class="col-lg-7 col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <th colspan="4" class="h1">Sân 2</th>
+                                        </thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Slot</th>
+                                            <th>Cơ sở</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <th colspan="3" class="h1">Slot</th>
+                                        </thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Khung giờ</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                                <div class="tab-pane container fade" id="san3">
+                                    <!-- truyền nội dung cho sân 3 -->
+                                     <div class="tblYard" id="tblYard">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+
+                        <div class="row">
+                                    <div class="col-lg-7 col-md-6">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <th colspan="4" class="h1">Sân 3</th>
+                                            </thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Slot</th>
+                                                <th>Cơ sở</th>
+                                                <th>Thao tác</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-5 col-md-6">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <th colspan="3" class="h1">Slot</th>
+                                            </thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Khung giờ</th>
+                                                <th>Thao tác</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                            </div>
+                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+            
+
+                        
+                      
+             
+
+
+
+                    </div>
+                </div>
+           
+
+                       
+        
+                <div class="tab-pane fade" id="dsStaff" role="tabpanel">
+                    <!--Danh sách sản phẩm -->
+                    <div role="tabpanel" class="tab-pane in active" id="dsStaff">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <!-- BEGIN BUTTOM THÊM MỚI -->
+                                <button id="btnThemStaff" class="btn btn-success" data-toggle="modal"
+                                    data-target="#myStaff">
+                                    <i class="fa fa-plus mr-1"></i>
+                                    Thêm Mới
+                                </button>
+                                <!-- END BUTTON THÊM MỚI -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- BEGIN TÌM KIẾM -->
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Nhập từ khóa"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2"><i
+                                                class="fa fa-search"></i></span>
+                                    </div>
+                                </div>
+                                <!-- END TÌM KIẾM -->
+                            </div>
+                        </div>
+                   
+                        <div class="clear-fix"></div>
+                        <div class="tblStaff" id="tblStaff">
+                            <!-- BEGIN TABLE SẢN PHẨM -->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <th>STT</th>
+                                    <th>ID</th>
+                                    <th>Tên</th>
+
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Thao tác</th>
+                                </thead>
+                                <tbody id="tbDSStaff"></tbody>
+                            </table>
+                            <!-- END TABLE SẢN PHẨM -->
+                        </div>
+                        <br />
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+       
+        <div class="footer-Manager">
+            <p class="text-center">&#169; Badminton Court Management - Team 4 - SWP391</p>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Tên Sản Phẩm</label>
+                            <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giá</label>
+                            <input id="GiaSP" class="form-control" placeholder="Nhập vào giá" />
+                        </div>
+                        <div class="form-group">
+                            <label>Hình Ảnh</label>
+                            <input id="HinhSP" class="form-control" placeholder="Nhập vào hình sản phẩm" />
+                        </div>
+                        <div class="form-group">
+                            <button onclick="addProduct()" class="btn btn-success">Thêm sản phẩm</button>
+
+                            <button onclick="updateProduct()" class="btn btn-primary ml-2">Cập nhật sản phẩm</button>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+        <!---Staff--->
+        <div class="modal fade" id="myStaff">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thêm nhân viên</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Mã nhân viên</label>
+                            <input id="MaNV" class="form-control" placeholder="Nhập vào mã nhân viên" />
+                        </div>
+                        <div class="form-group">
+                            <label>Tên nhân viên</label>
+                            <input id="TenNV" class="form-control" placeholder="Nhập vào tên nhân viên" />
+                        </div>
+                        <div class="form-group">
+                            <label>Điện thoại</label>
+                            <input id="DienThoai" class="form-control" placeholder="Nhập số điện thoại" />
+                        </div>
+                        <div class="form-group">
+                            <label>Điện thoại</label>
+                            <input id="DienThoai" class="form-control" placeholder="Nhập số điện thoại" />
+                        </div>
+                        <div class="form-group">
+                            <label>Cơ sở</label>
+                            <input id="CoSo" class="form-control" placeholder="Nhập cơ sở" />
+                        </div>
+                        <div class="form-group">
+                            <label>Sân phụ trách</label>
+                            <input id="SanPhuTrach" class="form-control" placeholder="Nhập vào sân phụ trách" />
+                        </div>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <input id="Type" class="form-control" placeholder="Nhập Type" />
+                        </div>
+                        <div class="form-group">
+                            <button onclick="addProduct()" class="btn btn-success">Lưu</button>
+
+                            <button onclick="updateProduct()" class="btn btn-primary ml-2">Hủy</button>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+        <!---CoSo--->
+        <div class="modal fade" id="myCoSo">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Thêm cơ sở</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Mã cơ sở</label>
+                            <input id="MaCS" class="form-control" placeholder="Nhập vào mã cơ sở" />
+                        </div>
+                        <div class="form-group">
+                            <label>Tên cơ sở</label>
+                            <input id="TênCS" class="form-control" placeholder="Nhập vào tên cơ sở" />
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <input id="Diachi" class="form-control" placeholder="Nhập địa chỉ" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giờ làm việc</label>
+                            <input id="Workhour" class="form-control" placeholder="Nhập khung giờ" />
+                        </div>
+                        <div class="form-group">
+                            <label>Giờ làm việc</label>
+                            <input id="Workhour" class="form-control" placeholder="Nhập khung giờ" />
+                        </div>
+                        <div class="form-group">
+                            <label>Đánh giá</label>
+                            <input id="Feedback" class="form-control" placeholder="Nhập khung giờ" />
+                        </div>
+                        <div class="form-group">
+                            <label>Số sân</label>
+                            <input id="Yardnumber" class="form-control" placeholder="Nhập số sân" />
+                        </div>
+                        <div class="form-group">
+                            <label>Số sân</label>
+                            <input id="Yardnumber" class="form-control" placeholder="Nhập đánh giá" />
+                        </div>
+                        <div class="form-group">
+                            <button onclick="addProduct()" class="btn btn-success">Lưu</button>
+
+                            <button onclick="updateProduct()" class="btn btn-primary ml-2">Hủy</button>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctx = document.getElementById("chardoanhthuthang").getContext("2d");
+            var myLineChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: [
+                        "Tháng 1",
+                        "Tháng 2",
+                        "Tháng 3",
+                        "Tháng 4",
+                        "Tháng 5",
+                        "Tháng 6",
+                        "Tháng 7",
+                        "Tháng 8",
+                        "Tháng 9",
+                        "Tháng 10",
+                        "Tháng 11",
+                        "Tháng 12",
+                    ],
+                    datasets: [
+                        {
+                            label: "Doanh thu theo tháng 2023-2024",
+                            backgroundColor: "rgba(75,192,192,0.2)",
+                            borderColor: "rgba(75,192,192,1)",
+                            data: [65, 59, 80, 81, 56, 55, 40, 100, 10, 30, 10],
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        });
+
+        var navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(function (navLink) {
+            navLink.addEventListener("click", function () {
+                navLinks.forEach(function (link) {
+                    link.classList.remove("active");
+                    link.classList.remove("active");
+                });
+
+                this.classList.add("active");
+            });
+        });
+    </script>
+
+    <!-- model js -->
+    <script src="../js/models/admin.js"></script>
+    <script src="../js/managerScreen.js"></script>
+    <script src="../js/models/facility.js"></script>
+    <script src="../js/models/staff.js"></script>
+    <script src="../js/models/yard.js"></script>
+    <script src="../js/models/order.js"></script>
+    <script src="../js/models/facility2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

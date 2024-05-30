@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.admin .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #fff;
+    height: 60px;
+}
+
+.admin .topbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.admin .topbar .logo .logo-img {
+    width: 150px;
+}
+
+.admin .topbar .logo .nameapp p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.admin .topbar .search {
+    position: relative;
+    width: 50%;
+    height: 30px;
+}
+
+.admin .topbar .search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.admin .topbar .search input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+    height: 30px;
+}
+
+.admin .topbar .notification .bell-icon {
+    position: relative;
+}
+
+.admin .topbar .notification .bell-icon i {
+    color: rgb(246, 246, 12);
+    font-size: 20px;
+}
+
+.number-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    text-align: center;
+}
+
+.number-notification b {
+    color: white;
+    font-size: 12px;
+}
+
+.admin .topbar .user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.admin .topbar .user p {
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+.admin .topbar .user img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.admin .body-admin {
+    display: flex;
+}
+
+.admin .body-admin .link {
+    font-weight: 700;
+}
+
+.admin .body-admin .admin-right {
+    width: 80%;
+    padding: 70px;
+}
+
+.admin .body-admin .admin-right .char {
+    margin: 40px 0;
+    background-color: #f5f5f5;
+    height: 500px;
+}
+
+.admin .body-admin .admin-left {
+    padding: 20px 0;
+    width: 20%;
+    background-color: #4334aa;
+}
+
+.admin .body-admin .admin-left .admin-left-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 40px;
+}
+
+.admin .body-admin .admin-left .list-option ul li {
+    margin-bottom: 20px;
+    background-color: #4334aa;
+    width: 100%;
+    height: 70px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin .body-admin .admin-left .list-option ul li:hover {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.admin .body-admin .admin-left .list-option ul li:hover span {
+    color: #1f1f6a;
+}
+
+.admin .body-admin .admin-left .list-option ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: left;
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+
+.admin .body-admin .admin-left .list-option ul li a .icon {
+    margin-right: 10px;
+}
+
+.admin .body-admin .admin-left .list-option ul li a span {
+    color: white;
+}
+
+.admin .body-admin .admin-left .list-option ul li .nav-link.active {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 100%;
+}
+
+.admin .body-admin .admin-left .list-option ul li .nav-link.active span {
+    color: black;
+}
+
+.logout.btn.btn-block {
+    width: 90%;
+}
+
+.admin th {
+    background-color: #4334aa;
+    color: #fff;
+}
+
+.admin td {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.admin td i {
+    font-size: 25px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.admin th {
+    text-align: center;
+}
+
+.admin .icon-detail {
+    width: 100%;
+    margin: auto;
+}
+
+.admin .icon-detail:hover {
+    color: orange;
+}
+
+.filter-manage-checkin {
+    display: flex;
+    margin: 5px;
+}
+
+.status {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 4px;
+    justify-content: center;
+    padding: 10px 0;
+    margin-left: 4px;
+    width: 90%;
+}
+
+.status .nav-link {
+    padding: 0 30px;
+    position: relative;
+    color: rgb(52, 58, 64);
+}
+
+.status .nav-link:hover,
+.status .nav-link.active {
+    color: #4334aa;
+    text-decoration: none;
+}
+
+.status .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #4334aa;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.status .nav-link:hover::before {
+    width: 100%;
+}
+
+.comments {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left,
+.card-yard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+.table td:hover {
+    background-color: #333;
+}
+.table td:hover p {
+    color: #ffffff;
+}
+.comment-content {
+    text-decoration: none;
+    color: #333;
+}
+.comment-content:hover {
+    text-decoration: none;
+}
+
+.comment-content:hover .main-content h5 {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.main-content h5 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.main-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.date p {
+    margin: 0;
+    font-size: 12px;
+    color: #aaa;
+    text-align: right;
+}
+
+.card-yard-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-yard-content {
+    margin-top: 10px;
+}
+
+.card-yard-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.feedback .user-feedback {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.feedback .comment {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.user-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-details {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-header h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.comment-header p {
+    margin: 0;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.comment-body p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.response p {
+    margin: 0;
+    font-size: 12px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.response p:hover {
+    text-decoration: underline;
+}
+
+.footer-admin {
+    background-color: #ffffff;
+    padding: 30px 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer-admin p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/*# sourceMappingURL=adminPage.css.map */

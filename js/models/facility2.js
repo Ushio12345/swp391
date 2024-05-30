@@ -2,11 +2,9 @@ var facility = {
     facilityID: "CS1",
     facilityName: "Sân cầu lông Thảo Nguyên",
     facilityAddress: "TP. Hồ Chí Minh",
-    facilityOwnerID: "OW1",
-    facilityOperating: "7:00 - 23:00",
-    facilityEmail: "thaonguyenBabmindton@gmail.com",
-    facilityPrice: "50.000 - 75.000",
-    start: 5,
+    facilityWorkHour: "9h - 21h",
+    facilityNumYard: "2",
+    facilityReview: "5 star",
 };
 
 function renderFacility(listFacility) {
@@ -16,31 +14,25 @@ function renderFacility(listFacility) {
         var facility = listFacility[i];
         var facilityTr = `
         <tr>
-                <td>${i + 1}</td> 
+                <td>${i + 1}</td> <!-- Adding index as STT -->
                 <td>${facility.facilityID}</td>
-                   <td>${facility.facilityOwnerID}</td>
                 <td>${facility.facilityName}</td>
-               
-                <td>${facility.facilityEmail}</td>
-              
-              
-              
-         
-              
+                <td>${facility.facilityAddress}</td>
+                <td>${facility.facilityWorkHour}</td>
+                <td>${facility.facilityNumYard}</td>
+                <td>${facility.facilityReview}</td>
                 <td>
-                 
+                    <button onclick="viewDetails(${
+                        admin.id
+                    })" class="btn btn-green" style="background-color: #61b14c; color: white;">Chi tiết</button>
                     <button onclick="editProduct('${facility.facilityID}')" class="btn btn-primary">Sửa</button>
-                       <button onclick="delProduct('${facility.facilityID}')" class="btn btn-danger mr-2">Xoá</button>
+                    <button onclick="delProduct('${facility.facilityID}')" class="btn btn-danger mr-2">Xoá</button>
                 </td>
-            
-                <td>  <button onclick="showDetail('${
-                    facility.facilityID
-                }')"  type="button" class="icon-detail" data-bs-toggle="modal" data-bs-target="#detailCourt"><i class="fa-solid fa-circle-info"></i></button></td>
         </tr>
         `;
         facilityRow += facilityTr;
     }
-    document.getElementById("tblDSCoSo").innerHTML = facilityRow;
+    document.getElementById("tblDSCoSo2").innerHTML = facilityRow;
 }
 
 renderFacility([facility]);

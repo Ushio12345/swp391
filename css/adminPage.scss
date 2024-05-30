@@ -8,7 +8,9 @@ body {
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
 }
-
+a {
+    text-decoration: none;
+}
 @mixin df() {
     display: flex;
     align-items: center;
@@ -244,5 +246,25 @@ a {
         margin: 0;
 
         font-weight: 600;
+    }
+}
+
+.detailCourt {
+    @include df();
+    .detailCourt-right {
+        font-weight: 600;
+    }
+}
+.logout {
+    background-color: rgb(244, 81, 81);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    &:hover {
+        background-color: green;
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
     }
 }

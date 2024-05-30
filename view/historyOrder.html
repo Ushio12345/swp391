@@ -56,70 +56,184 @@
             </div>
         </div>
         <div class="status">
-            <a href="">Đang chờ duyệt</a>
-            <a href="">Đã duyệt</a>
-            <a href="">Đã chơi</a>
-            <a href="">Đã hủy</a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#processing">Đang chờ duyệt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#approved">Đã duyệt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#played">Đã chơi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#cancel">Đã hủy</a>
+                </li>
+            </ul>
         </div>
-        <div class="container w-50">
-            <div class="list-yard">
-                <div class="yard">
-                    <div class="yard-top">
-                        <div class="trangthai text-end"><p>Đã thanh toán</p></div>
-                        <hr />
-                    </div>
-                    <div class="yard-info">
-                        <div class="img-yard">
-                            <img src="../img/download.jpg" alt="" />
+        <!-- Tab panes -->
+        <div class="tab-content w-50 m-auto">
+            <div class="tab-pane container active" id="processing">
+                <div class="container">
+                    <div class="list-yard">
+                        <div class="yard">
+                            <div class="yard-top">
+                                <div class="trangthai text-end"><p>Đang xử lý</p></div>
+                                <hr />
+                            </div>
+                            <div class="yard-info row">
+                                <div class="img-yard col-lg-5">
+                                    <img src="../img/download.jpg" alt="" />
+                                </div>
+                                <div class="yard-content col-lg-6">
+                                    <div class="row">
+                                        <h3>Sân cầu lông Phú Hữu</h3>
+                                        <p class="col-lg-4">Sân: <span>3</span></p>
+                                        <p class="col-lg-8 text-end">Ngày: <span>1/6/2024</span></p>
+                                        <p>Slot: <span>Thứ 4: 7:00 - 8:00, Thứ 5: 7:00 - 8:00</span></p>
+                                        <p>Địa chỉ: <span>phường Linh Trung</span></p>
+                                        <p>Hình thức đặt lịch: <span>Lịch cố định</span></p>
+                                        <p>Tháng có hiệu lực: <span>Tháng 6</span></p>
+                                        <p>Tổng tiền: <span>450.000đ</span></p>
+                                        <p>
+                                            Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="yard-content">
-                            <h3>Sân cầu lông Phú Hữu</h3>
-                            <p>Sân: <span>3</span></p>
-                            <p>Slot: <span>3</span></p>
-                            <p>Địa chỉ: <span>phường Linh Trung</span></p>
-                            <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
-                            <p>Tổng tiền: <span>150.000đ</span></p>
-                            <p>
-                                Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
-                            </p>
-                            <form action="">
-                                <label for="rate">Đánh giá</label><br />
-                                <textarea name="rate" id="rate" placeholder="Nhập đánh giá của bạn tại đây..."></textarea><br />
-                                <button class="btn btn-success">Gửi đánh giá</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="yard">
-                    <div class="yard-top">
-                        <div class="trangthai text-end"><p>Đã thanh toán</p></div>
-                        <hr />
-                    </div>
-                    <div class="yard-info">
-                        <div class="img-yard">
-                            <img src="../img/download.jpg" alt="" />
-                        </div>
-                        <div class="yard-content">
-                            <h3>Sân cầu lông Thanh Hà</h3>
-                            <p>Sân: <span>1</span></p>
-                            <p>Slot: <span>1</span></p>
-                            <p>Địa chỉ: <span>phường Linh Trung</span></p>
-                            <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
-                            <p>Tổng tiền: <span>70.000đ</span></p>
-                            <p>
-                                Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
-                            </p>
-                            <form action="">
-                                <label for="rate">Đánh giá</label><br />
-                                <textarea name="rate" id="rate" placeholder="Nhập đánh giá của bạn tại đây..."></textarea><br />
-                                <button class="btn btn-success">Gửi đánh giá</button>
-                            </form>
+                        <div class="yard">
+                            <div class="yard-top">
+                                <div class="trangthai text-end"><p>Đang xử lý</p></div>
+                                <hr />
+                            </div>
+                            <div class="yard-info">
+                                <div class="img-yard">
+                                    <img src="../img/download.jpg" alt="" />
+                                </div>
+                                <div class="yard-content col-lg-6">
+                                    <div class="row">
+                                        <h3>Sân cầu lông Phú Hữu</h3>
+                                        <p class="col-lg-4">Sân: <span>3</span></p>
+                                        <p class="col-lg-8 text-end">Ngày: <span>2/6/2024</span></p>
+                                        <p>Slot: <span>Thứ 5: 7:00 - 8:00</span></p>
+                                        <p>Địa chỉ: <span>phường Linh Trung</span></p>
+                                        <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
+
+                                        <p>Tổng tiền: <span>50.000đ</span></p>
+                                        <p>
+                                            Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="tab-pane container fade" id="approved">
+                <div class="container">
+                    <div class="list-yard">
+                        <div class="yard">
+                            <div class="yard-top">
+                                <div class="trangthai text-end"><p>Chờ check in</p></div>
+                                <hr />
+                            </div>
+                            <div class="yard-info">
+                                <div class="img-yard">
+                                    <img src="../img/download.jpg" alt="" />
+                                </div>
+                                <div class="yard-content col-lg-6">
+                                    <div class="row">
+                                        <h3>Sân cầu lông Phú Hữu</h3>
+                                        <p class="col-lg-4">Sân: <span>3</span></p>
+                                        <p class="col-lg-8 text-end">Ngày: <span>2/6/2024</span></p>
+                                        <p>Slot: <span>Thứ 5: 7:00 - 8:00</span></p>
+                                        <p>Địa chỉ: <span>phường Linh Trung</span></p>
+                                        <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
+
+                                        <p>Tổng tiền: <span>50.000đ</span></p>
+                                        <p>
+                                            Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="yard">
+                            <div class="yard-top">
+                                <div class="trangthai text-end"><p>Chờ check in</p></div>
+                                <hr />
+                            </div>
+                            <div class="yard-info">
+                                <div class="img-yard">
+                                    <img src="../img/download.jpg" alt="" />
+                                </div>
+                                <div class="yard-content col-lg-6">
+                                    <div class="row">
+                                        <h3>Sân cầu lông Phú Hữu</h3>
+                                        <p class="col-lg-4">Sân: <span>3</span></p>
+                                        <p class="col-lg-8 text-end">Ngày: <span>2/6/2024</span></p>
+                                        <p>Slot: <span>Thứ 5: 7:00 - 8:00</span></p>
+                                        <p>Địa chỉ: <span>phường Linh Trung</span></p>
+                                        <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
+
+                                        <p>Tổng tiền: <span>50.000đ</span></p>
+                                        <p>
+                                            Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="played">
+                <div class="container">
+                    <div class="list-yard">
+                        <div class="yard">
+                            <div class="yard-top">
+                                <div class="trangthai text-end"><p>Đã check in</p></div>
+                                <hr />
+                            </div>
+                            <div class="yard-info">
+                                <div class="img-yard">
+                                    <img src="../img/download.jpg" alt="" />
+                                </div>
+                                <div class="yard-content col-lg-6">
+                                    <div class="row">
+                                        <h3>Sân cầu lông Phú Hữu</h3>
+                                        <p class="col-lg-4">Sân: <span>3</span></p>
+                                        <p class="col-lg-8 text-end">Ngày: <span>29/5/2024</span></p>
+                                        <p>Slot: <span>Thứ 5: 7:00 - 8:00</span></p>
+                                        <p>Địa chỉ: <span>phường Linh Trung</span></p>
+                                        <p>Hình thức đặt lịch: <span>Lịch đơn</span></p>
+
+                                        <p>Tổng tiền: <span>50.000đ</span></p>
+                                        <p>
+                                            Hình thức thanh toán: <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+                                        </p>
+                                        <form action="">
+                                            <label for="rate">Đánh giá</label><br />
+                                            <textarea name="rate" id="rate" placeholder="Nhập đánh giá của bạn tại đây..."></textarea><br />
+                                            <button class="btn btn-success">Gửi đánh giá</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane container fade" id="cancel">
+                <h3 class="text-center p-5">Không tìm thấy đơn bạn đang tìm kiếm</h3>
+            </div>
         </div>
+
         <!-- footer -->
         <section class="footer">
             <div class="container">
